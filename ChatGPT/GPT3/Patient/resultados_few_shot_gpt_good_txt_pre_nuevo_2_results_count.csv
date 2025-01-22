@@ -1,0 +1,9 @@
+Error,count
+Sin errores,187
+Key '.managingOrganization' is present in FHIR generated but not in FHIR example,9
+Key '.meta' is present in FHIR generated but not in FHIR example,8
+Key '.identifier' is present in FHIR generated but not in FHIR example,7
+'maritalStatus.coding[0].system': FHIR Generated value is wrong,2
+The length of list 'extension' in FHIR example differs,1
+warning,196
+error,11

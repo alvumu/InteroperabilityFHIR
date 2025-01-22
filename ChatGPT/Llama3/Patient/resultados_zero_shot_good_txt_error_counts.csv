@@ -1,0 +1,31 @@
+Error,count
+'identifier[0].system': FHIR Generated value is wrong,230
+'name[0].family': FHIR Generated value is wrong,230
+Key '.communication' is present in FHIR generated but not in FHIR example,229
+Key 'maritalStatus.coding[0].display' is present in FHIR example but not in FHIR generated,211
+'maritalStatus.coding[0].system': FHIR Generated value is wrong,206
+The length of list 'extension' in FHIR example differs,199
+'birthDate': FHIR Generated value is wrong,152
+'maritalStatus.coding[0].code': FHIR Generated value is wrong,91
+Key 'name[0].text' is present in FHIR example but not in FHIR generated,77
+Key '.deceasedDateTime' is present in FHIR generated but not in FHIR example,40
+'extension[1].url': FHIR Generated value is wrong,31
+Key 'extension[1].valueCoding' is present in FHIR example but not in FHIR generated,31
+'extension[0].url': FHIR Generated value is wrong,31
+Key 'extension[0].valueCoding' is present in FHIR example but not in FHIR generated,31
+Key 'extension[0].extension' is present in FHIR generated but not in FHIR example,31
+Key 'extension[1].extension' is present in FHIR generated but not in FHIR example,19
+Key '.maritalStatus' is present in FHIR generated but not in FHIR example,19
+Key 'extension[2].valueCode' is present in FHIR generated but not in FHIR example,19
+Key 'extension[2].valueCoding' is present in FHIR example but not in FHIR generated,19
+'extension[2].url': FHIR Generated value is wrong,19
+Key '.admission' is present in FHIR example but not in FHIR generated,12
+Key 'extension[1].valueCode' is present in FHIR generated but not in FHIR example,12
+Key '.insurance' is present in FHIR example but not in FHIR generated,5
+Key '.language' is present in FHIR example but not in FHIR generated,5
+Key '.admissionSource' is present in FHIR example but not in FHIR generated,3
+Key '.admissionLocation' is present in FHIR example but not in FHIR generated,2
+Key '.dischargeLocation' is present in FHIR example but not in FHIR generated,2
+'identifier[0].value': FHIR Generated value is wrong,1
+Key '.deathtime' is present in FHIR example but not in FHIR generated,1
+error,230

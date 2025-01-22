@@ -1,0 +1,214 @@
+Tabla,attribute,Llama,CorrectLlama,GPT,CorrectGPT,TeoricalCorrect
+admissions,subject_id,Encounter.subject.reference,YES,Encounter.subject,YES
+admissions,hadm_id,Encounter.identifier.value,YES,Encounter.identifier,YES
+admissions,admittime,Encounter.period.start,NO,Encounter.actualPeriod.start,NO,Encounter.admission.origin.period.start
+admissions,dischtime,Encounter.period.end,NO,Encounter.actualPeriod.end,NO,Encounter.admission.destination.period.end
+admissions,deathtime,Encounter.extension,NO,Encounter.status,NO,Encounter.admission.destination.period.end
+admissions,admission_type,Encounter.extension,NO,Encounter.admission.admitSource,YES,Encounter.admission.admitSource
+admissions,admission_location,Encounter.extension,NO,Encounter.admission.origin,NO,Encounter.admission.admitsource
+admissions,discharge_location,Encounter.extension,NO,Encounter.admission.destination,NO,Encounter.admission.dischargedisposition
+admissions,insurance,Encounter.extension,NO,Encounter.account,YES,Encounter.account
+admissions,language,Encounter.extension,NO,Encounter.language,NO,Patient.language
+admissions,marital_status,Encounter.extension,NO,Encounter.extension,NO,Patient.maritalStatus
+admissions,ethnicity,Encounter.extension,NO,Encounter.extension,NO,No direct mapping
+admissions,edregtime,Encounter.extension,NO,Encounter.extension,NO,Encounter.location.period.start
+admissions,edouttime,Encounter.extension,NO,Encounter.extension,NO,Encounter.location.period.end
+admissions,hospital_expire_flag,Encounter.extension,NO,Encounter.status,NO,No direct mapping
+d_items,itemid,Observation.identifier.value,YES,observation.identifier,YES,observation.identifier
+d_items,label,Observation.code.coding.display,YES,observation.code.text,YES,observation.code.text
+d_items,abbreviation,Observation.code.coding.display,YES,observation.code.coding.code,YES,observation.code.coding
+d_items,linksto,Observation.derivedFrom.reference,NO,Observation.basedOn,YES,Observation.basedOn
+d_items,category,Observation.category.coding.code,YES,observation.category.text,YES,observation.category.text
+d_items,unitname,Observation.valueQuantity.unit,YES,observation.valueQuantity.code,NO,Observation.valueQuantity.unit
+d_items,param_type,Observation.valueQuantity.code,YES,No mapea,No,Observation.valueQuantity.code
+d_items,lownormalvalue,Observation.referenceRange.low.value,YES,observation.referenceRange.low,YES,observation.referenceRange.low
+d_items,highnormalvalue,Observation.referenceRange.high.value,YES,observation.referenceRange.high,YES,observation.referenceRange.high
+d_items,component_label,No mapea,NO,No mapea,NO,Observation.component.code.text
+d_items,component_abbreviation,No mapea,NO,No mapea,NO,Observation.component.code.text
+d_items,component_unitname,No mapea,NO,No mapea,NO,Observation.component.code.text
+d_items,component_lownormalvalue,No mapea,NO,No mapea,NO,Observation.component.code.text
+d_items,component_highnormalvalue,No mapea,NO,No mapea,NO,Observation.component.code.text
+datetimeevents,subject,Observation.subject.reference,YES,Observation.subject,YES,Observation.subject
+datetimeevents,hadm_id,Observation.encounter.extension,NO,Observation.encounter,YES,Observation.encounter
+datetimeevents,stay_id,Encounter.encounter.extension,NO,Observation.encounter,NO,No direct mapping
+datetimeevents,charttime,Observation.effectiveDateTime,YES,Observation.effectiveDateTime,YES,Observation.effectiveDateTime
+datetimeevents,storetime,Observation.issued,YES,Observation.issued,YES,Observation.issued
+datetimeevents,itemid,Observation.code.coding.code,YES,Observation.code,YES,Observation.code.coding.code
+datetimeevents,value,Observation.value,YES,Observation.valueDateTime,YES,Observation.valuedatetime
+datetimeevents,valueuom,Observation.valueQuantity.unit,NO,Observation.valueCodeableConcept,NO,Observation.valuedatetime
+datetimeevents,warning,Observation.interpretation.coding[0].code,NO,Observation.dataAbsentReason,NO,No direct mapping
+diagnoses_icd,subject_id,Condition.subject.reference,YES,condition.subject,YES,condition.subject
+diagnoses_icd,hadm_id,Condition.encounter.reference,YES,condition.encounter,YES,condition.subject
+diagnoses_icd,seq_num,Condition.extension.valueInteger,NO,condition.identifier,YES,condition.subject
+diagnoses_icd,icd_code,Condition.code.coding.code,YES,condition.code,YES,condition.subject
+diagnoses_icd,icd_version,Condition.code.coding.system,NO,condition.code,NO,No direct mapping
+
+emar,subject_id,MedicationAdministration.subject.reference,YES,MedicationAdministration.subject,YES,MedicationAdministration.subject
+emar,hadm_id,MedicationAdministration.encounter.reference,YES,MedicationAdministration.encounter,YES,MedicationAdministration.encounter
+emar,emar_id,MedicationAdministration.identifier.value,YES,MedicationAdministration.identifier,YES,MedicationAdministration.identifier
+emar,emar_seq,MedicationAdministration.identifier.extension.value,NO,MedicationAdministration.identifier,YES
+emar,poe_id,MedicationAdministration.basedOn.reference,NO,MedicationAdministration.request,NO,MedicationAdministration.partOf
+emar,pharmacy_id,MedicationAdministration.supportingInformation.reference,NO,MedicationAdministration.device,NO,MedicationAdministration.medication.coding.code
+emar,charttime,MedicationAdministration.occurenceDateTime,YES,MedicationAdministration.occurenceDateTime,YES,MedicationAdministration.occurenceDateTime
+emar,medication,MedicationAdministration.medication.codeableConcept,YES,MedicationAdministration.medication,YES,MedicationAdministration.medication
+emar,event_txt,MedicationAdministration.note.text,NO,MedicationAdministration.statusReason,NO,MedicationAdministration.status
+emar,scheduletime,MedicationAdministration.plannedDateTime,NO,MedicationAdministration.occurenceTiming,NO,No direct mapping
+emar,storetime,MedicationAdministration.recorded,YES,MedicationAdministration.recorded,YES,MedicationAdministration.recorded
+hcpsevents,subject_id,Encounter.subject.reference,YES,Encounter.subject,YES,Encounter.subject
+hcpsevents,hadm_id,Encounter.identifier.value,YES,Encounter.identifier,YES,Encounter.identifier
+hcpsevents,hcpcs_cd,Encounter.type.cdoing.code,NO,Encounter.reason,NO,Encounter.diagnosis
+hcpsevents,seq_num,Encounter.extension,YES,Encounter.diagnosis.rank,YES,Encounter.diagnosis.rank
+hcpsevents,short_description,Encounter.type.coding.display,NO,Encounter.reason.display,NO,Encounter.diagnosis.condition.note
+icustays,subject_id,Encounter.subject.reference,YES,Encounter.subject,YES,Encounter.subject
+icustays,hadm_id,Encounter.identifier.value,YES,Encounter.episodeOfCare,NO,Encounter.identifier
+icustays,stay_id,Encounter.identifier.value,NO,Encounter.identifier,NO,Encounter.partOf
+icustays,first_careunit,Encounter.location.location.display,YES,Encounter.location.location,YES,Encounter.location.location
+icustays,last_careunit,Encounter.location.location.display,YES,Encounter.location.location,YES,Encounter.location.location
+icustays,intime,Encounter.actualPeriod.start,YES,Encounter.actualPeriod.start,YES,Encounter.actualPeriod.start
+icustays,outtime,Encounter.actualPeriod.end,YES,Encounter.actualPeriod.end,YES,Encounter.actualPeriod.end
+icustays,los,Encounter.length.value,YES,Encounter.length,YES,Encounter.length
+inputevents,subject_id,MedicationAdministration.subject.reference,YES,medicationadministration.subject,YES,MedicationAdministration.subject
+inputevents,hadm_id,MedicationAdministration.encounter.identifier,YES,medicationadministration.encounter,YES,medicationadministration.encounter
+inputevents,stay_id,MedicationAdministration.encounter.identifier,NO,medicationadministration.encounter,NO,medicationadministration.partOf
+inputevents,starttime,MedicationAdministration.occurenceDateTime,NO,MedicationAdministration.occurenceDateTime,NO,MedicationAdministration.occurencePeriod.start
+inputevents,endtime,MedicationAdministration.occurrencePeriod.end,YES,MedicationAdministration.occurencePeriod,YES,MedicationAdministration.occurencePeriod.end
+inputevents,storetime,MedicationAdministration.recorded,NO,medicationadministration.recorded,NO,MedicationAdministration.eventHistory
+inputevents,itemid,MedicationAdministration.medication.code,YES,medicationadministration.medication,YES,Medicationadministration.medication
+inputevents,amount,MedicationAdministration.dosage.dose.value,YES,medicationadministration.dosage.dose,YES,MedicationAdministration.dosage.dose.value
+inputevents,amountuom,MedicationAdministration.dosage.dose.unit,YES,medicationadministration.dosage.dose,YES,MedicationAdministration.dosage.dose.unit
+inputevents,rate,MedicationAdministration.dosage.rateQuantity.value,YES,medicationadministration.dosage.rateratio,NO,MedicationAdministration.dosage.rateQuantity.value
+inputevents,rateuom,MedicationAdministration.dosage.rateQuantity.unit,YES,medicationadministration.dosage.rateratio,NO,MedicationAdministration.dosage.rateQuantity.unit
+inputevents,orderid,MedicationAdministration.request.reference,NO,medicationadministration.basedOn,NO,MedicationAdministration.partOf
+inputevents,linkorderid,MedicationAdministration.request.identifier,NO,medicationadministration.partOf,YES,MedicationAdministration.partOf
+inputevents,ordercategoryname,MedicationAdministration.category.coding.display,YES,medicationadministration.category,YES,MedicationAdministration.category
+inputevents,secondaryordercategoryname,MedicationAdministration.extension.valueString,NO,medicationadministration.category,YES,MedicationAdministration.category
+inputevents,ordercomponenttypedescription,MedicationAdministration.extension.valueString,NO,medicationadministration.category,YES,MedicationAdministration.category
+inputevents,ordercategorydescription,MedicationAdministration.dosage.text,NO,medicationadministration.category,YES,MedicationAdministration.category
+inputevents,patientweight,MedicationAdministration.extension.valueQuantity.value,NO,medicationadministration.supportingInformation,YES,MedicationAdministration.supportingInformation
+inputevents,totalamount,MedicationAdministration.extension.valueQuantity.value,NO,medicationadministration.dosage.dose,YES,MedicationAdministration.dosage.dose.value
+inputevents,totalamountuom,MedicationAdministration.extension.valueQuantity.unit,NO,medicationadministration.dosage.dose,YES,MedicationAdministration.dosage.dose.unit
+inputevents,statusdescription,MedicationAdministration.status,YES,medicationadministration.status,YES,MedicationAdministration.status
+inputevents,originalamount,MedicationAdministration.extension.valueQuantity.value,NO,medicationadministration.dosage.dose,NO,No direct mapping
+inputevents,originalrate,MedicationAdministration.extension.valueQuantity.value,NO,MedicationAdministration.dosage.rateratio,NO,No direct mapping
+inputevents,isopenbag,MedicationAdministration.extension.valueBoolean,NO,medicationadministration.extension,NO,No direct mapping
+microbiologyevents,subject_id,Observation.subject.reference,YES,Observation.subject,YES,Observation.subject
+microbiologyevents,hadm_id,Observation.encounter.reference,YES,Observation.encounter,YES,Observation.encounter
+microbiologyevents,chartdate,Observation.effectiveDateTime,YES,Observation.effectiveDateTime,YES,Observation.effectivedatetime
+microbiologyevents,charttime,Observation.effectiveDateTime,YES,Observation.effectiveDateTime,YES,Observation.effectiveDateTime
+microbiologyevents,spec_itemid,Observation.specimen.reference,YES,Observation.specimen,YES,Observation.specimen.reference
+microbiologyevents,spec_type_desc,Observation.specimen.display,YES,Observation.specimen,YES,Observation.specimen.display
+microbiologyevents,org_itemid,Observation.component.valueCodeableConcept.coding.code,YES,Observation.derivedFrom,NO,Observation.component.code.coding.code
+microbiologyevents,org_name,Observation.component.valueCodeableConcept.coding.display,YES,Observation.derivedFrom,NO,Observation.component.code.coding.code
+microbiologyevents,isolate_num,Observation.valueInteger,NO,Observation.component,YES,Observation.component.valueinteger
+microbiologyevents,ab_itemid,Observation.component.code.coding.code,YES,Observation.component.code,YES,Observation.component.code.coding.code
+microbiologyevents,ab_name,Observation.component.code.coding.display,YES,Observation.component.code,YES,Observation.component.code.coding.display
+microbiologyevents,dilution_text,Observation.component.valueString,YES,Observation.component.valueString,YES,Observation.component.valuestring
+microbiologyevents,dilution_comparison,Observation.component.valueString,YES,Observation.component.valueString,YES,Observation.component.valuestring
+microbiologyevents,dilution_value,Observation.component.valueQuantity.value,YES,Observation.component.valueQuantity,YES,Observation.component.valuequantity.value
+microbiologyevents,interpretation,Observation.component.interpretation.coding.code,YES,Observation.component.interpretation,YES,Observation.component.interpretation.code.coding
+outputevents,subject_id,Observation.subject.reference,YES,Observation.subject,YES,Observation.subject
+outputevents,hadm_id,Observation.encounter.reference,YES,Observation.encounter,YES,Observation.encounter
+outputevents,stay_id,Observation.encounter.identfier,NO,Observation.basedOn,NO,Observation.partOf
+outputevents,charttime,Observation.effectiveDateTime,YES,Observation.effectiveDateTime,YES,Observation.effectivedatetime
+outputevents,storetime,No mapea,NO,Observation.issued,YES,Observation.issued
+outputevents,itemid,Observation.code.coding.code,YES,Observation.code,YES,Observation.code.coding.code
+outputevents,value,Observation.valueQuantity.value,YES,Observation.valueQuantity.value,YES,Observation.valueQuantity.value
+outputevents,valueuom,Observation.valueQuantity.unit,YES,Observation.valueQuantity.unit,YES,Observation.valueQuantity.unit
+patients,subject_id,patient.identifier,YES,patient.identifier,YES,Patient.identifier
+patients,gender,Patient.gender,YES,patient.gender,YES,Patient.gender
+patients,anchor_age,Patient.extension,NO,patient.birthdate,NO,No direct mapping
+patients,anchor_year,Patient.extension,NO,patient.birthdate,NO,No direct mapping
+patients,anchor_year_group,Patient.extension,NO,patient.birthdate,NO,No direct mapping
+patients,dod,patient.deceasedDateTime,YES,patient.deceasedDateTime,YES,Patient.deceasedDateTime
+pharmacy,subject_id,MedicationDispense.subject.reference,YES,MedicationDispense.subject,YES,MedicationDispense.subject
+pharmacy,hadm_id,MedicationDispense.encounter.reference,YES,MedicationDispense.encounter,YES,MedicationDispense.encounter
+pharmacy,pharmacy_id,MedicationDispense.identifier.identifier.value,NO,MedicationDispense.identifier,YES,MedicationDispense.identifier
+pharmacy,poe_id,MedicationDispense.authorizingPrescription.reference,YES,MedicationDispense.authorizingprecription,YES,MedicationDispense.authorizingprescription
+pharmacy,starttime,MedicationDispense.whenPrepared,NO,MedicationDispense.whenPrepared,NO,MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod.start
+pharmacy,stoptime,MedicationDispense.whenHandedOver,NO,MedicationDispense.whenHandedOver,NO,MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod.end
+pharmacy,medication,MedicationDispense.medication.codeableConcept.text,YES,MedicationDispense.medication,YES,MedicationDispense.medication
+pharmacy,proc_type,MedicationDispense.type.codeableConcept.coding.display,YES,MedicationDispense.type,YES,MedicationDispense.type
+pharmacy,status,MedicationDispense.status,YES,MedicationDispense.status,NO,MedicationDispense.status
+pharmacy,entertime,MedicationDispense.recorded,NO,MedicationDispense.recorded,NO,No direct mapping
+pharmacy,verifiedtime,MedicationDispense.statusChanged,NO,MedicationDispense.statusChanged,NO,MedicationDispense.whenPrepared
+pharmacy,route,MedicationDispense.dosageInstruction.route,YES,MedicationDispense.dosageInstruction.route,YES,MedicationDispense.dosageInstruction.route
+pharmacy,frequency,MedicationDispense.dosageInstruction.timing.repeat.frequency,YES,MedicationDispense.dosageInstruction.timing,YES,MedicationDispense.dosageInstruction.timing.repeat.frequency
+pharmacy,disp_sched,MedicationDispense.dosageInstruction.timing.repeat.boundsPeriod,NO,MedicationDispense.dosageInstruction.timing,YES,MedicationDispense.dosageInstruction.timing
+pharmacy,infusion_type,MedicationDispense.dosageInstruction.method.text,NO,MedicationDispense.dosageInstruction.method,NO,MedicationDispense.dosageInstruction.additionalInstruction
+pharmacy,sliding_scale,MedicationDispense.dosageInstruction.doseAndRate.type.text,NO,MedicationDispense.dosageInstruction.additionalInstruction,NO,MedicationDispense.dosageinstruction.asNeeded
+pharmacy,lockout_interval,MedicationDispense.extension.value,NO,MedicationDispense.dosageInstruction.timing,YES,MedicationDispense.dosageinstruction.timing
+pharmacy,basal_rate,MedicationDispense.dosageInstruction.doseAndRate.rateQuantity.value,NO,MedicationDispense.dosageInstruction.rate,NO,MedicationDispense.dosageinstruction.doseAndRate
+pharmacy,one_hr_max,MedicationDispense.extension.value,NO,MedicationDispense.dosageInstruction.maxDosePerPeriod,YES,MedicationDispense.dosageinstruction.maxDosePerPeriod
+pharmacy,doses_per_24_hrs,MedicationDispense.extension.value,NO,MedicationDispense.dosageInstruction.timing,YES,MedicationDispense.dosageinstruction.timing
+pharmacy,duration,MedicationDispense.dosageinstruction.timing.repeat.boundsDiration.value,NO,MedicationDispense.dosageInstruction.timing,YES,MedicationDispense.dosageinstruction.timing
+pharmacy,duration_interval,MedicationDispense.extension.value,NO,MedicationDispense.dosageInstruction.timing,YES,MedicationDispense.dosageinstruction.timing.repeat.durationUnit
+pharmacy,expiration_value,MedicationDispense.extension.value,NO,MedicationDispense.dosageInstruction.expirationDate,NO,MedicationAdministration.dosageInstruction.timing.durationMax
+pharmacy,expiration_unit,MedicationDispense.extension.value,NO,MedicationDispense.dosageInstruction.expirationDate,NO,MedicationAdministration.dosageInstruction.timing.durationUnit
+pharmacy,expirationdate,MedicationDispense.extension.value,NO,MedicationDispense.expirationDate,NO,No direct mapping
+pharmacy,dispensation,MedicationDispense.destination.reference,NO,MedicationDispense.type,NO,No direct mapping
+pharmacy,fill_quantity,MedicationDispense.quantity.value,NO,MedicationDispense.quantity,NO,No direct mapping
+prescriptions,subject_id,MedicationRequest.subject.reference,YES,MedicationRequest.subject,YES,MedicationRequest.subject
+prescriptions,hadm_id,MedicationRequest.encounter.reference,YES,MedicationRequest.encounter,YES,MedicationRequest.encounter
+prescriptions,icustays_id,MedicationRequest.extension,YES,No mapea,YES,No direct mapping
+prescriptions,startdate,MedicationRequest.authoredOn,NO,MedicationRequest.authoredOn,NO,MedicationRequest.effectiveDosePeriod.start
+prescriptions,enddate,MedicationRequest.dispenseRequest.validityPeriod.end,NO,MedicationRequest.dispenseRequest.validityPeriod,NO,MedicationRequest.effectiveDosePeriod.end
+prescriptions,drug,MedicationRequest.medication.codeableConcept.text,YES,MedicationRequest.medication,YES,MedicationRequest.medication
+prescriptions,drug_type,MedicationRequest.category.codeableConcept.coding.code,NO,MedicationRequest.category,YES,MedicationRequest.medication
+prescriptions,drug_name_poe,MedicationRequest.extension,NO,MedicationRequest.medication,YES,MedicationRequest.medication
+prescriptions,drug_name_generic,MedicationRequest.extension,NO,MedicationRequest.medication,YES,MedicationRequest.medication
+prescriptions,formulary_drug_cd,MedicationRequest.medication.codeableConcept.coding,NO,MedicationRequest.medication,YES,MedicationRequest.medication
+prescriptions,gsn,MedicationRequest.medication.codeableConcept.coding,NO,MedicationRequest.medication,YES,MedicationRequest.medication
+prescriptions,ndc,MedicationRequest.medication.codeableConcept.coding,NO,MedicationRequest.medication,YES,MedicationRequest.medication
+prescriptions,prod_strength,MedicationRequest.extension,NO,MedicationRequest.dosageInstruction,YES,MedicationRequest.medication
+prescriptions,dose_val_rx,MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.value,YES,MedicationRequest.dosageInstruction.doseAndRate.doseQuantity,YES,MedicationRequest.dosageinstruction.doseAndRate
+prescriptions,dose_unit_rx,MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.unit,YES,MedicationRequest.dosageInstruction.doseAndRate.doseQuantity,YES,MedicationRequest.dosageinstruction.doseAndRate
+prescriptions,form_val_disp,MedicationRequest.dispenseRequest.quantity.value,YES,MedicationRequest.dosageInstruction,NO,MedicationRequest.dispenseRequest.quantity
+prescriptions,form_unit_disp,MedicationRequest.dispenseRequest.quantity.unit,YES,MedicationRequest.dosageInstruction,NO,MedicationRequest.dispenseRequest.quantity.unit
+prescriptions,route,MedicationRequest.dosageInstruction.route.coding.code,YES,MedicationRequest.dosageInstruction.route,YES,MedicationRequest.dosageinstruction.route
+procedureevents,subject_id,Procedure.subject.reference,YES,Procedure.subject,YES,Procedure.subject
+procedureevents,hadm_id,Procedure.encounter.refernece,YES,Procedure.encounter,YES,Procedure.encounter
+procedureevents,stay_id,Procedure.encounter.reference,YES,Procedure.partOf,YES,Procedure.partOf
+procedureevents,starttime,Procedure.ocurrenceDateTime,NO,Procedure.occurrenceDateTime,NO,Procedure.occurenceperiod.start
+procedureevents,endtime,Procedure.occurrencePeriod.end,YES,Procedure.occurrencePeriod,YES,Procedure.occurenceperiod.end
+procedureevents,storetime,Procedure.recorded,YES,Procedure.recorded,YES,Procedure.recorded
+procedureevents,itemid,Procedure.code.coding.code,YES,Procedure.code,YES,Procedure.code
+procedureevents,value,Procedure.used.valueQuantity.value,NO,Procedure.value,NO,Procedure.performer.period
+procedureevents,valueuom,Procedure.used.valueQuantity.unit,NO,Procedure.valueom,NO,Procedure.performer.period
+procedureevents,location,Procedure.location.reference,NO,Procedure.location,NO,Procedure.bodySite
+procedureevents,locationcategory,Procedure.location.extension.valueCodeableConcept.coding.code,NO,Procedure.location,NO,Procedure.bodySite.category
+procedureevents,orderid,Procedure.basedOn.reference,NO,Procedure.identifier,YES,Procedure.identifier
+procedureevents,linkorderid,Procedure.basedOn.extension.valueReference.reference,NO,Procedure.basedOn,NO,Procedure.partOf
+procedureevents,ordercategoryname,Procedure.category.coding.code,YES,Procedure.category,YES,Procedure.category
+procedureevents,secondaryordercategoryname,Procedure.category.extension.valueCodeableConcept.coding.code,YES,Procedure.category,YES,Procedure.category
+procedureevents,ordercategorydescription,Procedure.category.coding.display,YES,Procedure.category,YES,Procedure.category
+procedureevents,patientweight,Procedure.subject.reference.extension.valueQuantity.value,NO,Procedure.supportingInfo,YES,Procedure.supportinginfo
+procedureevents,totalamount,Procedure.used.valueQuantity.value,NO,Procedure.used,NO,No direct mapping
+procedureevents,totalamountuom,Procedure.used.valueQuantity.unit,NO,Procedure.reason.used,NO,No direct mapping
+procedureevents,isopenbag,Procedure.extension[0].valueBoolean,NO,Procedure.used,NO,No direct mapping
+procedureevents,continueinnextdept,Procedure.extension[1].valueBoolean,NO,Procedure.statusReason,NO,No direct mapping
+procedureevents,cancelreason,Procedure.extension[2].valueCodeableConcept.coding.code,NO,Procedure.statusReason,NO,No direct mapping
+procedureevents,statusdescription,Procedure.extension[3].valueString,NO,Procedure.status,YES,Procedure.status
+procedureevents,comments_date,Procedure.note.time,YES,Procedure.note,NO,Procedure.note
+procedureevents,originalamount,Procedure.used.extension.valueQuantity.value,NO,Procedure.used,NO,No direct mapping
+procedureevents,originalrate,Procedure.used.extension.valueRatio.numerator.value,NO,Procedure.used,NO,No direct mapping
+procedures_icd,subject_id,Procedure.subject,YES,Procedure.subject,YES,Procedure.subject
+procedures_icd,hadm_id,Procedure.encounter,YES,Procedure.encounter,YES,Procedure.encounter
+procedures_icd,icd_code,Procedure.code.coding.code,YES,Procedure.code,YES,Procedure.code
+procedures_icd,icd_version,Procedure.code.coding.system,YES,Procedure.code,YES,Procedure.code
+procedures_icd,chartdate,Procedure.occurrenceDateTime,NO,No mapea,NO,Procedure.occurrence[x]
+procedures_icd,seq_num,Procedure.sequence,NO,Procedure.identifier,NO,No direct mapping
+transfers,subject_id,Encounter.subject,YES,Encounter.subject,YES,Encounter.subject
+transfers,hadm_id,Encounter.identifier,YES,Encounter.identifier,YES,Encounter.identifier
+transfers,transfer_id,Encounter.extension.transferId.value,NO,Encounter.location.location,YES,Encounter.location.location
+transfers,eventtype,Encounter.extension.eventtype,NO,Encounter.status,YES,Encounter.type
+transfers,careunit,Encounter.location.physicalType,NO,Encounter.location.form,YES,Encounter.location.form
+transfers,intime,Encounter.period.start.dateTime,NO,Encounter.location.period.start,YES,Encounter.location.period.start
+transfers,outtime,Encounter.period.end.dateTime,NO,Encounter.location.period.end,YES,Encounter.location.period.start
+services,subject_id,Encounter.identfier,NO,Encounter.identifier,NO,Encounter.subject
+services,hadm_id,Encounter.identifier,YES,Encounter.identifier,YES,Encounter.identifier
+services,transfertime,Encounter.extension,NO,Encounter.period.start,NO,Encounter.actualperiod.start
+services,prev_service,Encounter.extension,NO,Encounter.serviceProvider,NO,Encounter.admission.admitsource
+services,curr_service,Encounter.extension,NO,Encounter.serviceProvider,NO,Encounter.admission.destination
+
+
+

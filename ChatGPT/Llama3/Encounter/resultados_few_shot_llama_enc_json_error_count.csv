@@ -1,0 +1,8 @@
+Error,count
+Sin errores,97
+The length of list 'location' in FHIR example differs,15
+'location[1].period.end': FHIR Generated value is wrong,4
+'location[0].location.reference': FHIR Generated value is wrong,2
+The length of list 'type' in FHIR example differs,1
+'location[0].period.start': FHIR Generated value is wrong,1
+Warning,119

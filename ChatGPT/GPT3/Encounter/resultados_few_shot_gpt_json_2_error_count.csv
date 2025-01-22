@@ -1,0 +1,4 @@
+Error,count
+Sin errores,118
+Key 'hospitalization.dischargeDisposition' is present in FHIR example but not in FHIR generated,1
+Warning,119

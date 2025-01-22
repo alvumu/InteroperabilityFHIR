@@ -1,0 +1,174 @@
+{
+    "Cluster 1": {
+        "Attributes": [
+            "subject_id",
+            "hadm_id",
+            "admittime",
+            "dischtime",
+            "admission_type",
+            "admission_location",
+            "discharge_location",
+            "status",
+            "charttime",
+            "stoptime",
+            "stay_id",
+            "chartdate",
+            "first_careunit",
+            "statusdescription",
+            "starttime",
+            "careunit",
+            "intime",
+            "curr_service",
+            "outtime",
+            "dod",
+            "anchor_age",
+            "endtime"
+        ],
+        "Top Resources": [
+            {
+                "Resource": "Patient"
+            },
+            {
+                "Resource": "MedicationRequest"
+            },
+            {
+                "Resource": "Encounter"
+            },
+            {
+                "Resource": "Procedure"
+            },
+            {
+                "Resource": "Condition"
+            }
+        ]
+    },
+    "Cluster 2": {
+        "Attributes": [
+            "language",
+            "marital_status",
+            "ethnicity",
+            "gender",
+            "short_description",
+            "icd_code",
+            "hcpcs_cd",
+            "icd_version"
+        ],
+        "Top Resources": [
+            {
+                "Resource": "Patient"
+            },
+            {
+                "Resource": "DocumentReference"
+            },
+            {
+                "Resource": "Encounter"
+            },
+            {
+                "Resource": "Procedure"
+            },
+            {
+                "Resource": "MedicationRequest"
+            }
+        ]
+    },
+    "Cluster 3": {
+        "Attributes": [
+            "lownormalvalue",
+            "value",
+            "valueuom",
+            "label",
+            "amountuom",
+            "highnormalvalue",
+            "itemid",
+            "location"
+        ],
+        "Top Resources": [
+            {
+                "Resource": "Observation"
+            },
+            {
+                "Resource": "MedicationAdministration"
+            },
+            {
+                "Resource": "MedicationRequest"
+            },
+            {
+                "Resource": "Patient"
+            },
+            {
+                "Resource": "NutritionIntake"
+            }
+        ]
+    },
+    "Cluster 4": {
+        "Attributes": [
+            "ordercategorydescription",
+            "emar_id",
+            "dose_val_rx",
+            "dose_unit_rx",
+            "storetime",
+            "amount",
+            "one_hr_max",
+            "frequency",
+            "fill_quantity",
+            "medication",
+            "pharmacy_id",
+            "prod_strength",
+            "event_txt",
+            "rate",
+            "rateuom",
+            "entertime",
+            "duration",
+            "route",
+            "ordercategoryname"
+        ],
+        "Top Resources": [
+            {
+                "Resource": "MedicationDispense"
+            },
+            {
+                "Resource": "MedicationAdministration"
+            },
+            {
+                "Resource": "MedicationStatement"
+            },
+            {
+                "Resource": "Medication"
+            },
+            {
+                "Resource": "MedicationRequest"
+            }
+        ]
+    },
+    "Cluster 5": {
+        "Attributes": [
+            "org_name",
+            "test_name",
+            "ab_itemid",
+            "ab_name",
+            "category",
+            "spec_type_desc",
+            "org_itemid",
+            "dilution_value",
+            "interpretation",
+            "spec_itemid"
+        ],
+        "Top Resources": [
+            {
+                "Resource": "Observation"
+            },
+            {
+                "Resource": "MedicationRequest"
+            },
+            {
+                "Resource": "Condition"
+            },
+            {
+                "Resource": "DiagnosticReport"
+            },
+            {
+                "Resource": "DocumentReference"
+            }
+        ]
+    }
+}

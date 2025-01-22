@@ -1,0 +1,211 @@
+attribute,Llama,GPT
+subject_id,Encounter.subject,Encounter.subject
+hadm_id,Encounter.identifier,Encounter.identifier
+admittime,Encounter.plannedStartDate,Encounter.actualPeriod
+dischtime,Encounter.plannedEndDate,Encounter.actualPeriod
+deathtime,Encounter.actualPeriod,Encounter.admission.destination
+admission_type,Encounter.admission.admitSource,Encounter.admission.admitSource
+admission_location,Encounter.admission.origin,Encounter.admission.origin
+discharge_location,Encounter.admission.destination,Encounter.admission.destination
+insurance,Encounter.participant.actor,Encounter.account
+language,Encounter.communication.language.coding.code,No mapea
+marital_status,Encounter.martialStatus.language.coding.code,No mapea
+ethnicity,Encounter.extension.ethnicity,No mapea
+edregtime,Encounter.period.start,Encounter.admission.preAdmissionIdentifier
+edouttime,Encounter.period.end,Encounter.admission.preAdmissionIdentifier
+hospital_expire_flag,Encounter.hospital_expire_flag,No mapea
+itemid,Observation.identifier,observation.identifier
+label,Observation.code,observation.code
+abbreviation,observation.code,observation.code
+linksto,Observation.partOf,Observation.derivedFrom
+category,Observation.category,observation.category
+unitname,Observation.unitname,observation.value
+param_type,Observation.value,Observation.method
+lownormalvalue,Observation.referenceRange.low,observation.referenceRange.low
+highnormalvalue,Observation.referenceRange.high,observation.referenceRange.high
+component_label,No mapea,No mapea
+component_abbreviation,No mapea,No mapea
+component_unitname,No mapea,No mapea
+component_lownormalvalue,No mapea,No mapea
+component_highnormalvalue,No mapea,No mapea
+subject,Observation.identifier,Observation.subject
+hadm_id,Observation.identifier,Observation.encounter
+stay_id,Observation.identifier,Observation.encounter
+charttime,Observation.effective,Observation.effective
+storetime,Observation.issued,Observation.issued
+itemid,Observation.code,Observation.code
+value,Observation.value,Observation.value
+valueuom,Observation.value,Observation.value
+warning,Observation.dataAbsentReason,Observation.interpretation
+subject_id,Condition.subject,condition.subject
+hadm_id,Condition.encounter,condition.encounter
+seq_num,No mapea,condition.identifier
+icd_code,Condition.code,condition.code
+icd_version,Condition.category,condition.code
+subject_id,MedicationAdministration.subject,MedicationAdministration.subject
+hadm_id,MedicationAdministration.encounter,MedicationAdministration.encounter
+emar_id,MedicationAdministration.identifier,MedicationAdministration.identifier
+emar_seq,No mapea,MedicationAdministration.identifier
+poe_id,MedicationAdministration.request,MedicationAdministration.request
+pharmacy_id,No mapea,MedicationAdministration.device
+charttime,MedicationAdministration.occurence,MedicationAdministration.occurence[x]
+medication,MedicationAdministration.medication,MedicationAdministration.medication
+event_txt,MedicationAdministration.eventHistory,MedicationAdministration.status
+scheduletime,No direct mapping,MedicationAdministration.occurence[x]
+storetime,MedicationAdministration.recorded,MedicationAdministration.recorded
+subject_id,Encounter.subject,Encounter.subject
+hadm_id,Encounter.identifier,Encounter.identifier
+hcpcs_cd,Encounter.type,Encounter.reason.value
+seq_num,Encounter.priority,Encounter.diagnosis.condition
+short_description,Encounter.reason.use,Encounter.reason.use
+subject_id,Encounter.subject,Encounter.subject
+hadm_id,Encounter.identifier,Encounter.episodeOfCare
+stay_id,Encounter.identifier,Encounter.identifier
+first_careunit,Encounter.location.location,Encounter.location.location
+last_careunit,Encounter.location.location,Encounter.location.location
+intime,Encounter.location.period,Encounter.actualPeriod
+outtime,Encounter.location.period,Encounter.actualPeriod
+los,Encounter.length,Encounter.length
+subject_id,MedicationAdministration.subject.reference,medicationadministration.subject
+hadm_id,MedicationAdministration.identfier,medicationadministration.encounter
+stay_id,MedicationAdministration.identfier,medicationadministration.encounter
+starttime,MedicationAdministration.occurrence,MedicationAdministration.occurence
+endtime,MedicationAdministration.occurrence,MedicationAdministration.occurence
+storetime,MedicationAdministration.recorded,medicationadministration.recorded
+itemid,MedicationAdministration.medication.codeableReference,medicationadministration.medication
+amount,MedicationAdministration.dosage.dose,MedicationAdministration.dosage.dose
+amountuom,MedicationAdministration.dosage.dose,MedicationAdministration.dosage.dose
+rate,MedicationAdministration.dosage.rate,MedicationAdministration.dosage.rate
+rateuom,MedicationAdministration.dosage.rate,MedicationAdministration.dosage.rate
+orderid,MedicationAdministration.request,MedicationAdministration.identifier
+linkorderid,MedicationAdministration.request,MedicationAdministration.partOf
+ordercategoryname,MedicationAdministration.category,MedicationAdministration.category
+secondaryordercategoryname,MedicationAdministration.category,MedicationAdministration.category
+ordercomponenttypedescription,MedicationAdministration.dosage.text,MedicationAdministration.note
+ordercategorydescription,MedicationAdministration.category,MedicationAdministration.note
+patientweight,MedicationAdministration.supportingInfo,MedicationAdministration.supportingInformation
+totalamount,MedicationAdministration.dosage.dose,MedicationAdministration.dosage.dose
+totalamountuom,MedicationAdministration.dosage.dose,MedicationAdministration.dosage.dose
+statusdescription,MedicationAdministration.status,MedicationAdministration.status
+originalamount,MedicationAdministration.dosage.dose,MedicationAdministration.dosage.dose
+originalrate,MedicationAdministration.dosage.rate,MedicationAdministration.dosage.dose
+isopenbag,MedicationAdministration.statusReason,MedicationAdministration.note
+continueinnextdept,MedicationAdministration.statusReason,MedicationAdministration.note
+subject_id,Observation.identfier,Observation.subject
+hadm_id,Observation.instantiates,Observation.encounter
+chartdate,Observation.effective,Observation.effective
+charttime,Observation.effective,Observation.effective
+spec_itemid,Observation.specimen,Observation.specimen
+spec_type_desc,Observation.bodySite,Observation.specimen
+org_itemid,Observation.value,Observation.derivedFrom
+org_name,Observation.value,Observation.derivedFrom
+isolate_num,Observation.component.value,Observation.identifier
+ab_itemid,Observation.component.code,Observation.component.code
+ab_name,Observation.component.code,Observation.component.code
+dilution_text,Observation.component.value,Observation.component.value
+dilution_comparison,Observation.component.value,Observation.component.value
+dilution_value,Observation.component.value,Observation.component.value
+interpretation,Observation.interpretation,Observation.component.interpretation
+subject_id,Observation.identifier,Observation.subject
+hadm_id,Observation.identfier,Observation.encounter
+stay_id,Observation.identifier,Observation.partOf
+charttime,Observation.effective,Observation.effective
+storetime,Observation.issued,Observation.issued
+itemid,Observation.code,Observation.code
+value,Observation.value,Observation.value
+valueuom,Observation.value,Observation.value
+subject_id,patient.identifier,patient.identifier
+gender,Patient.gender,patient.gender
+anchor_age,No mapea,Patient.birthDate
+anchor_year,Patient.birthDate,Patient.birthDate
+anchor_year_group,No mapea,Patient.birthDate
+dod,patient.deceased,patient.deceased
+subject_id,MedicationDispense.subject,MedicationDispense.subject
+hadm_id,MedicationDispense.encounter,MedicationDispense.encounter
+pharmacy_id,MedicationDispense.identifier,MedicationDispense.identifier
+poe_id,MedicationDispense.basedOn,MedicationDispense.authorizingprescription
+starttime,MedicationDispense.whenPrepared,MedicationDispense.whenPrepared
+stoptime,MedicationDispense.whenHandedOver,MedicationDispense.whenHandedOver
+medication,MedicationDispense.medication,MedicationDispense.medication
+proc_type,MedicationDispense.type,MedicationDispense.type
+status,MedicationDispense.status,MedicationDispense.status
+entertime,MedicationDispense.recorded,MedicationDispense.recorded
+verifiedtime,No mapea,MedicationDispense.statusChanged
+route,MedicationDispense.dosageInstruction,MedicationDispense.dosageInstruction
+frequency,MedicationDispense.dosageInstruction,MedicationDispense.dosageInstruction
+disp_sched,No mapea,MedicationDispense.dosageInstruction
+infusion_type,No mapea,MedicationDispense.dosageInstruction
+sliding_scale,No mapea,MedicationDispense.dosageInstruction
+lockout_interval,No mapea,MedicationDispense.dosageInstruction
+basal_rate,No mapea,MedicationDispense.dosageInstruction
+one_hr_max,No mapea,MedicationDispense.dosageInstruction
+doses_per_24_hrs,No mapea,MedicationDispense.dosageInstruction
+duration,No mapea,MedicationDispense.dosageInstruction
+duration_interval,No mapea,MedicationDispense.dosageInstruction
+expiration_value,No mapea,MedicationDispense.note
+expiration_unit,No mapea,MedicationDispense.note
+expirationdate,No mapea,MedicationDispense.note
+dispensation,MedicationDispense.perfomer.actor,MedicationDispense.destination
+fill_quantity,MedicationDispense.quantity,MedicationDispense.quantity
+subject_id,MedicationRequest.subject,MedicationRequest.subject
+hadm_id,MedicationRequest.identifier,MedicationRequest.encounter
+icustay_id,MedicationRequest.identifier,MedicationRequest.encounter
+startdate,MedicationRequest.authoredOn,MedicationRequest.dispenseRequest.validityPeriod
+enddate,MedicationRequest.statusChanged,MedicationRequest.dispenseRequest.validityPeriod
+drug,MedicationRequest.medication,MedicationRequest.medication
+drug_type,MedicationRequest.medication,MedicationRequest.category
+drug_name_poe,MedicationRequest.medication,MedicationRequest.medication
+drug_name_generic,MedicationRequest.medication,MedicationRequest.medication
+formulary_drug_cd,MedicationRequest.medication,MedicationRequest.medication
+gsn,MedicationRequest.medication,MedicationRequest.identifier
+ndc,MedicationRequest.medication,MedicationRequest.identifier
+prod_strength,MedicationRequest.medication,MedicationRequest.medication
+dose_val_rx,MedicationRequest.dosageInstruction,MedicationRequest.dosageInstruction
+dose_unit_rx,MedicationRequest.dosageInstruction,MedicationRequest.dosageInstruction
+form_val_disp,MedicationRequest.dosageInstruction,MedicationRequest.dispenseRequest.quantity
+form_unit_disp,MedicationRequest.dosageInstruction,MedicationRequest.dosageInstruction
+route,MedicationRequest.dosageInstruction,MedicationRequest.dosageInstruction
+subject_id,Procedure.identifier,Procedure.subject
+hadm_id,Procedure.identifier,Procedure.encounter
+stay_id,Procedure.identifier,Procedure.partOf
+starttime,Procedure.occurence,Procedure.occurence
+endtime,Procedure.occurence,Procedure.occurence
+storetime,Procedure.recorded,Procedure.recorded
+itemid,Procedure.code,Procedure.code
+value,Procedure.value,Procedure.used
+valueuom,Procedure.value,Procedure.used
+location,Procedure.location,Procedure.location
+locationcategory,Procedure.location,Procedure.location
+orderid,Procedure.basedOn,Procedure.basedOn
+linkorderid,Procedure.basedOn,Procedure.basedOn
+ordercategoryname,Procedure.category,Procedure.category
+secondaryordercategoryname,Procedure.category,Procedure.category
+ordercategorydescription,Procedure.category,Procedure.category
+patientweight,Procedure.subject,Procedure.supportingInfo
+totalamount,Procedure.used,Procedure.used
+totalamountuom,Procedure.used,Procedure.used
+isopenbag,Procedure.used,Procedure.note
+continueinnextdept,Procedure.used,Procedure.note
+cancelreason,Procedure.statusReason,Procedure.statusReason
+statusdescription,Procedure.status,Procedure.status
+comments_date,Procedure.note,Procedure.note
+originalamount,Procedure.used,Procedure.used
+originalrate,Procedure.used,Procedure.used
+subject_id,Procedure.subject,Procedure.subject
+hadm_id,Procedure.encounter,Procedure.encounter
+icd_code,Procedure.code,Procedure.code
+icd_version,No mapea,Procedure.note
+chartdate,Procedure.occurence[x],No mapea
+seq_num,No mapea,Procedure.identifier
+subject_id,Encounter.subject,Encounter.subject
+hadm_id,Encounter.identifier,Encounter.admission.preAdmissionIdentifier
+transfer_id,Encounter.identifier,Encounter.location.location
+eventtype,Encounter.admission.origin,Encounter.admission.admitSource
+careunit,Encounter.location.location,Encounter.location.location
+intime,Encounter.location.period.start,Encounter.location.period
+outtime,Encounter.location.period.end,Encounter.location.period
+subject_id,Encounter.identfier,Encounter.identifier
+hadm_id,Encounter.identifier,Encounter.identifier
+transfertime,No mapea,Encounter.link.other
+prev_service,Encounter.link,Encounter.link.other
+curr_service,Encounter.link,Encounter.link.other

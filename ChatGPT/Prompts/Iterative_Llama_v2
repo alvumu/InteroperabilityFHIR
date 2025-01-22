@@ -1,0 +1,25 @@
+I will provide you a few examples of serialized data and the corresponding FHIR resource. Your task is to generate a FHIR resource based on the information about the patient .     
+                                  Data Input:
+                                  - Patient Profile:
+                                      - Profile: {fhir_profile}
+                                  - Input Examples:
+                                      - Patient 1: {patient_1_desc}
+                                      - Patient 2: {patient_2_desc}
+                                      - Patient 3: {patient_3_desc}
+                                      - Patient 4: {patient_4_desc}
+                                  - Output Examples:
+                                      - Resource 1: {patient_1_fhir}
+                                      - Resource 2: {patient_2_fhir}
+                                      - Resource 3: {patient_3_fhir}
+                                      - Resource 4: {patient_4_fhir}
+                                  - Objective Data:
+                                      - Patient to Generate: {patient_to_generate}
+                                                        ##Mapping instructions:
+                                                        - Ensure to generate the extension of the ethnicity for each patient. If the patient is "Hispanic/Latino" the value must be "Hispanic or Latino"; otherwise, the value must be "Not Hispanic or Latino".                                                
+                                                        - Ensure to generate the birthdate of the each patient. The birthdate must be calculated by subtracting the anchor_age from the intime.
+                                                        ##Output: 
+                                                        -You must only generate the FHIR resource as plain text following the example resources. Avoid to generate any additional information. Do not generate any code or comments.
+                                                        
+                                                        ##Indications: 
+                                                        -If the maximum token limit is reached before completing the resource, stop the task without providing an incomplete resource. 
+                     

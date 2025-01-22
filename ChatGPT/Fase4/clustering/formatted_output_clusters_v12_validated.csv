@@ -1,0 +1,68 @@
+attribute,GPT,TeoricalCorrect,CorrectGPT
+lownormalvalue,Observation.referenceRange.low;Observation.referenceRange.normalValue;Observation.referenceRange.text,Observation.referenceRange.low,YES
+hadm_id,Encounter.identifier;Procedure.encounter;Condition.encounter,Encounter.identifier,YES
+status,Procedure.status;MedicationRequest.status;Encounter.status,MedicationRequest.status/Observation.status,YES
+ordercategorydescription,MedicationRequest.category;MedicationAdministration.category;MedicationDispense.category,MedicationAdministration.dosage.method,NO
+value,Observation.value;Observation.component.value;Observation.dataAbsentReason,Observation.value,YES
+admittime,Encounter.actualPeriod;Encounter.plannedStartDate;Procedure.occurrence,Encounter.actualPeriod.start,YES
+gender,Patient.gender;No additional attribute found;No additional attribute found,Patient.gender,YES
+charttime,Observation.effectiveDateTime;Procedure.occurrence;Encounter.actualPeriod,Observation.effectiveDateTime/Specimen.collection.collectedDateTime/MedicationAdminstration.effectiveDateTime,YES
+stoptime,MedicationRequest.dispenseRequest.validityPeriod;Procedure.occurrence;Encounter.plannedEndDate,MedicationRequest.dispenseRequest.validityPeriod.end,YES
+stay_id,Encounter.identifier;Procedure.partOf;Condition.encounter,Observation.encounter/Procedure.encounter/Encounter.identifier,YES
+valueuom,Observation.value[x].unit;Observation.component.value[x].unit;Observation.referenceRange.low,Observation.valueQuantity.unit/Observation.referenceRange.low.unit,YES
+emar_id,MedicationAdministration.identifier;MedicationDispense.identifier;MedicationRequest.identifier,MedicationAdministration.identifier,YES
+dose_val_rx,MedicationAdministration.dosage.dose;MedicationRequest.dosageInstruction;MedicationDispense.dosageInstruction,MedicationRequest.dosageInstruction.dose,YES
+subject_id,Patient.identifier;Encounter.subject;Procedure.subject,Encounter.subject,YES
+dose_unit_rx,MedicationAdministration.dosage.dose;MedicationRequest.dosageInstruction;MedicationDispense.dosageInstruction,MedicationRequest.dosageInstruction.dose,YES
+storetime,MedicationAdministration.recorded;MedicationDispense.recorded;MedicationRequest.authoredOn,Observation.issued/Observation.effectiveDateTime,NO
+amount,MedicationDispense.quantity;MedicationAdministration.dosage.dose;MedicationRequest.quantity,MedicationAdministration.dosage.dose.value,YES
+chartdate,Observation.effectiveDateTime;Procedure.occurrence;Encounter.actualPeriod,Procedure.performer,NO
+label,Observation.code;Observation.component.code;Observation.category,Procedure.code.coding.display/MedicationAdministration.medication/Observation.code.coding.display,YES
+ab_name,Observation.component.code;Observation.value;Observation.note,Observation.code.coding.display,NO
+first_careunit,Encounter.location.location;Encounter.class;Encounter.type,Encounter.location.location,YES
+short_description,Procedure.code;DocumentReference.description;Procedure.note,Encounter.type.coding.display,NO
+one_hr_max,MedicationRequest.dosageInstruction;MedicationAdministration.dosage.rate;No additional attribute found,MedicationDispense.dosageInstruction.maxDosePerPeriod/MedicationRequest.dosageInstruction.maxDosePerPeriod,YES
+amountuom,MedicationAdministration.dosage.dose;MedicationRequest.dosageInstruction.dose;NutritionIntake.consumedItem.amount,MedicationAdministration.dosage.dose,YES
+org_name,Observation.performer;Observation.subject;Observation.encounter,Observation.code.coding.display,NO
+frequency,MedicationRequest.dosageInstruction;MedicationAdministration.dosage.rate;MedicationDispense.dosageInstruction,MedicationDispense.dosageInstruction.timing.code/MedicationRequest.dosageInstruction.timing.code,YES
+discharge_location,Encounter.admission.destination;Encounter.admission.dischargeDisposition;Encounter.location.location,Encounter.admission.dischargeDisposition,YES
+statusdescription,Procedure.statusReason;Procedure.status;Encounter.status,Procedure.status,YES
+starttime,Procedure.occurrence;Encounter.actualPeriod;Procedure.performer.period,MedicationAdministration.effectivePeriod.start/MedicationRequest.dispenseRequest.validityPeriod.start/Procedure.performer.period.start,YES
+test_name,Observation.code;Observation.category;Observation.method,Observation.code.coding.display,YES
+careunit,Encounter.location.location;Encounter.class;Encounter.type,Encounter.location.location,YES
+fill_quantity,MedicationDispense.quantity;MedicationRequest.dispenseRequest.quantity;No additional attribute found,MedicationDispense.quantity,YES
+intime,Encounter.actualPeriod;Encounter.plannedStartDate;Procedure.occurrence,Encounter.actualPeriod.start/Encounter.location.period.start,YES
+ab_itemid,Observation.identifier;Observation.component.code;Observation.component.value,Observation.code.coding.code,NO
+ethnicity,No direct FHIR attribute found;No additional attribute found;No additional attribute found,Patient.extension,NO
+category,Observation.category;Observation.code;Observation.note,Observation.category,YES
+highnormalvalue,Observation.referenceRange.high;Observation.referenceRange.normalValue;Observation.referenceRange.text,Observation.referenceRange.high.value,YES
+icd_code,Encounter.diagnosis.condition;Encounter.reason.value;Procedure.reason,Procedure.code.coding.code/Condition.code.coding.code,NO
+medication,MedicationRequest.medication;MedicationAdministration.medication;MedicationDispense.medication,MedicationAdministration.medication/MedicationDispense.medication,YES
+pharmacy_id,MedicationDispense.identifier;MedicationRequest.identifier;MedicationAdministration.identifier,MedicationAdministration.request/MedicationDispense.identifier/MedicationDispense.authorizingPrescription,YES
+curr_service,Encounter.serviceType;Encounter.careTeam;Encounter.class,Encounter.serviceType,YES
+marital_status,Patient.maritalStatus;No additional attribute found;No additional attribute found,Patient.maritalStatus,YES
+itemid,Observation.identifier;MedicationAdministration.identifier;NutritionIntake.identifier,MedicationAdministration.medication.coding.code/Observation.code.coding.code,NO
+dischtime,Encounter.actualPeriod;Encounter.plannedEndDate;Procedure.occurrence,Encounter.actualPeriod.end,YES
+outtime,Encounter.actualPeriod;Encounter.plannedEndDate;Procedure.occurrence,Encounter.actualPeriod.end/Encounter.location.period.end,YES
+location,Observation.bodySite;MedicationAdministration.dosage.site;NutritionIntake.location,Procedure.bodySite,NO
+language,Patient.communication.language;Patient.communication.preferred;No additional attribute found,Patient.communication.language,YES
+prod_strength,Medication.ingredient.strength;MedicationRequest.dosageInstruction;MedicationAdministration.dosage.dose,MedicationRequest.dosageInstruction.text,YES
+event_txt,MedicationAdministration.status;MedicationDispense.status;MedicationRequest.status,MedicationAdministration.route,NO
+rate,MedicationAdministration.dosage.rate;MedicationRequest.dosageInstruction;MedicationDispense.dosageInstruction,MedicationAdministration.effectiveDateTime/MedicationAdministration.dosage.rateQuantity.value,NO
+spec_type_desc,Observation.specimen;Observation.bodySite;Observation.method,Specimen.type.coding.code,NO
+hcpcs_cd,Procedure.code;No additional attribute found;No additional attribute found,Encounter.type.coding.code,NO
+icd_version,No direct FHIR attribute found;No additional attribute found;No additional attribute found,Procedure.code.coding.system,NO
+org_itemid,Observation.identifier;Observation.value;Observation.component.code,Observation.hasMember/Observation.code.coding.code/Observation.value,YES
+rateuom,MedicationAdministration.dosage.rate;MedicationRequest.dosageInstruction;MedicationDispense.dosageInstruction,MedicationAdministration.dosage.rate,YES
+dod,Patient.deceased;Encounter.admission.dischargeDisposition;Procedure.outcome,Patient.deceased,YES
+dilution_value,Observation.value;Observation.component.value;Observation.interpretation,Observation.extension,NO
+interpretation,Observation.interpretation;Observation.note;Observation.value,Observation.interpretation,YES
+admission_type,Encounter.class;Encounter.type;Encounter.priority,Encounter.priority/Encounter.class,YES
+admission_location,Encounter.admission.origin;Encounter.location.location;Encounter.admission.admitSource,Encounter.admission.admitSource,YES
+entertime,MedicationRequest.authoredOn;MedicationAdministration.recorded;MedicationDispense.recorded,MedicationRequest.authoredOn,YES
+anchor_age,Patient.birthDate;No additional attribute found;No additional attribute found,Patient.birthDate,YES
+duration,MedicationRequest.dispenseRequest.initialFill.duration;MedicationAdministration.dosage.rate;MedicationDispense.daysSupply,MedicationDispense.dosageInstruction.timing.duration,NO
+spec_itemid,Observation.specimen;Observation.identifier;Observation.component.code,Specimen.type.coding.code,NO
+endtime,Procedure.occurrence;Encounter.actualPeriod;Procedure.performer.period,MedicationAdministration.effectivePeriod.end/Procedure.performer.period,YES
+route,MedicationAdministration.dosage.route;MedicationRequest.dosageInstruction;MedicationDispense.dosageInstruction,MedicationAdministration.route/MedicationDispense.dosageInstruction.route/MedicationRequest.dosageInstruction.route,YES
+ordercategoryname,MedicationRequest.category;MedicationAdministration.category;MedicationDispense.category,Procedure.category,NO

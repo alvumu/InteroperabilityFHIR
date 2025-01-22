@@ -1,0 +1,8 @@
+##Mapping instructions:
+- Ensure to generate the extension of the ethnicity for each patient. If the patient is "Hispanic/Latino" the value must be "Hispanic or Latino"; otherwise, the value must be "Not Hispanic or Latino".                                                
+
+                                                        ##Output: 
+                                                        -You must only generate the FHIR resource as plain text following the example resources. Avoid to generate any additional information. Do not generate any code or comments.
+                                                        
+                                                        ##Indications: 
+                                                        -If the maximum token limit is reached before completing the resource, stop the task without providing an incomplete resource. 

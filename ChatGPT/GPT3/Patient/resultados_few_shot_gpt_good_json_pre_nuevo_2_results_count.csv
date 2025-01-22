@@ -1,0 +1,5 @@
+Error,count
+Sin errores,190
+'maritalStatus.coding[0].system': FHIR Generated value is wrong,17
+warning,190
+error,17

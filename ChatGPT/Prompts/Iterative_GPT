@@ -1,0 +1,14 @@
+                                                        - You must set the "ethnicity" field as 'Hispanic or Latino' if the patient is "Hispanic/Latino" or "South American"; otherwise, set it to 'Not Hispanic or Latino'.
+                                                        - When the ethnicity extension is "Not Hispanic or Latino", set the value code to "2186-5"
+
+                                                      v2 txt  - When the ethnicity of the patient is "Not Hispanic or Latino", set the race extension as "White" 
+
+
+-- Pre 
+
+                                                        - Ensure to set the "deceasedDateTime" field only when the value deathtime is not empty.
+                                                        - The UNKNOWN values have associated the url "http://terminology.hl7.org/CodeSystem/v3-NullFlavor" . 
+
+
+GPT JSON PRE  : 
+ - The UNKNOWN values have associated the url "http://terminology.hl7.org/CodeSystem/v3-NullFlavor" . 

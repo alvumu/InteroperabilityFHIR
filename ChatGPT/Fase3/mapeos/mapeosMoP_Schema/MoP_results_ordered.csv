@@ -1,0 +1,120 @@
+Tabla,attribute,Llama,CorrectLlama,GPT,CorrectGPT,TeoricalCorrect
+microbiologyevents,ab_itemid,Observation.component.code,YES,Observation.component.code,YES,Observation.component.code.coding.code
+microbiologyevents,ab_name,Observation.component.code,YES,Observation.component.code,YES,Observation.component.code.coding.display
+d_items,abbreviation,observation.code,YES,observation.code,YES,observation.code.coding
+admissions,admission_location,Encounter.admission.origin,NO,Encounter.admission.origin,NO,Encounter.admission.admitsource
+admissions,admission_type,Encounter.admission.admitSource,YES,Encounter.admission.admitSource,YES,Encounter.admission.admitSource
+admissions,admittime,Encounter.plannedStartDate,NO,Encounter.actualPeriod,NO,Encounter.period.start
+inputevents,amount,MedicationAdministration.dosage.dose,YES,MedicationAdministration.dosage.dose,YES,MedicationAdministration.dosage.dose.value
+inputevents,amountuom,MedicationAdministration.dosage.dose,YES,MedicationAdministration.dosage.dose,YES,MedicationAdministration.dosage.dose.unit
+patients,anchor_age,No mapea,NO,Patient.birthDate,YES,Patient.birthDate
+patients,anchor_year,Patient.birthDate,NO,Patient.birthDate,NO,No direct mapping
+patients,anchor_year_group,No mapea,YES,Patient.birthDate,NO,No direct mapping
+pharmacy,basal_rate,No mapea,NO,MedicationDispense.dosageInstruction,YES,MedicationDispense.dosageinstruction.doseAndRate
+transfers,careunit,Encounter.location.location,NO,Encounter.location.location,YES,Encounter.location
+d_items,category,Observation.category,YES,observation.category,YES,observation.category
+microbiologyevents,chartdate,Observation.effective,YES,Observation.effective,YES,Observation.effectivedatetime
+datetimeevents,charttime,Observation.effective,YES,Observation.effective,YES,Observation.effectivedatetime
+procedureevents,comments_date,Procedure.note,YES,Procedure.note,YES,Procedure.note
+d_items,component_unitname,No mapea,NO,No mapea,NO,observation.component.valueQuantity.unit
+services,curr_service,Encounter.link,NO,Encounter.link.other,NO,Encounter.serviceType
+admissions,deathtime,Encounter.actualPeriod,NO,Encounter.admission.destination,YES,Encounter.admission.destination.period.end
+microbiologyevents,dilution_comparison,Observation.component.value,YES,Observation.component.value,YES,Observation.component.valuestring
+microbiologyevents,dilution_text,Observation.component.value,YES,Observation.component.value,YES,Observation.component.valuestring
+microbiologyevents,dilution_value,Observation.component.value,YES,Observation.component.value,YES,Observation.component.valuequantity
+admissions,discharge_location,Encounter.admission.destination,NO,Encounter.admission.destination,NO,Encounter.admission.dischargedisposition
+admissions,dischtime,Encounter.plannedEndDate,NO,Encounter.actualPeriod,YES,Encounter.period.end
+pharmacy,disp_sched,No mapea,NO,MedicationDispense.dosageInstruction,YES,MedicationDispense.dosageinstruction.timing
+patients,dod,patient.deceased,YES,patient.deceased,YES,patient.deceasedDateTime
+prescriptions,dose_unit_rx,MedicationRequest.dosageInstruction,YES,MedicationRequest.dosageInstruction,YES,MedicationRequest.dosageinstruction.doseAndRate
+prescriptions,dose_val_rx,MedicationRequest.dosageInstruction,YES,MedicationRequest.dosageInstruction,YES,MedicationRequest.dosageinstruction.doseAndRate
+pharmacy,doses_per_24_hrs,No mapea,NO,MedicationDispense.dosageInstruction,YES,MedicationDispense.dosageinstruction.timing
+prescriptions,drug,MedicationRequest.medication,YES,MedicationRequest.medication,YES,MedicationRequest.medication
+prescriptions,drug_name_generic,MedicationRequest.medication,YES,MedicationRequest.medication,YES,MedicationRequest.medication
+prescriptions,drug_name_poe,MedicationRequest.medication,YES,MedicationRequest.medication,YES,MedicationRequest.medication
+prescriptions,drug_type,MedicationRequest.medication,YES,MedicationRequest.category,NO,MedicationRequest.medication
+pharmacy,duration,No mapea,NO,MedicationDispense.dosageInstruction,YES,MedicationDispense.dosageinstruction.timing
+pharmacy,duration_interval,No mapea,NO,MedicationDispense.dosageInstruction,YES,MedicationDispense.dosageinstruction.timing.repeat.durationUnit
+admissions,edouttime,Encounter.period.end,NO,Encounter.admission.preAdmissionIdentifier,NO,Encounter.location.period.end
+admissions,edregtime,Encounter.period.start,NO,Encounter.admission.preAdmissionIdentifier,NO,Encounter.location.period.start
+emar,emar_id,MedicationAdministration.identifier,YES,MedicationAdministration.identifier,YES,MedicationAdministration.identifier
+emar,emar_seq,No mapea,NO,MedicationAdministration.identifier,YES,MedicationAdministration.identifier
+prescriptions,enddate,MedicationRequest.statusChanged,NO,MedicationRequest.dispenseRequest.validityPeriod,NO,MedicationRequest.effectiveDosePeriod.end
+procedureevents,endtime,Procedure.occurence,YES,Procedure.occurence,YES,Procedure.occurenceperiod.start
+admissions,ethnicity,Encounter.extension.ethnicity,NO,No mapea,NO,Patient.extension
+emar,event_txt,MedicationAdministration.eventHistory,NO,MedicationAdministration.route,YES,MedicationAdministration.status
+transfers,eventtype,Encounter.admission.origin,NO,Encounter.admission.admitSource,NO,Encounter.type
+pharmacy,expiration_unit,No mapea,NO,MedicationDispense.note,NO,MedicationAdministration.dosageInstruction.timing.durationUnit
+pharmacy,expiration_value,No mapea,NO,MedicationDispense.note,NO,MedicationAdministration.dosageInstruction.timing.durationMax
+pharmacy,fill_quantity,MedicationDispense.quantity,YES,MedicationDispense.quantity,YES,MedicationDispense.quantity
+icustays,first_careunit,Encounter.location.location,YES,Encounter.location.location,YES,Encounter.location.location
+prescriptions,form_unit_disp,MedicationRequest.dosageInstruction,YES,MedicationRequest.dosageInstruction,YES,MedicationRequest.dispenseRequest.quantity.unit
+prescriptions,form_val_disp,MedicationRequest.dosageInstruction,YES,MedicationRequest.dispenseRequest.quantity,YES,MedicationRequest.dispenseRequest.quantity
+prescriptions,formulary_drug_cd,MedicationRequest.medication,YES,MedicationRequest.medication,YES,MedicationRequest.medication
+pharmacy,frequency,MedicationDispense.dosageInstruction,YES,MedicationDispense.dosageInstruction,YES,MedicationDispense.dosageinstruction.timing
+patients,gender,Patient.gender,YES,patient.gender,YES,Patient.gender
+prescriptions,gsn,MedicationRequest.medication,YES,MedicationRequest.identifier,YES,MedicationRequest.medication
+admissions,hadm_id,Encounter.identifier,YES,Encounter.identifier,YES,Encounter.identifier
+hcpsevents,hcpcs_cd,Encounter.type,YES,Encounter.reason.value,NO,Encounter.type
+d_items,highnormalvalue,Observation.referenceRange.high,YES,observation.referenceRange.high,YES,observation.referenceRange.high
+diagnoses_icd,icd_code,Condition.code,YES,condition.code,YES,condition.code
+procedures_icd,icd_version,No mapea,NO,Procedure.note,NO,Procedure.code
+pharmacy,infusion_type,No mapea,NO,MedicationDispense.dosageInstruction,YES,MedicationDispense.dosageinstruction.method
+admissions,insurance,Encounter.participant.actor,NO,Encounter.account,YES,Encounter.account
+microbiologyevents,interpretation,Observation.interpretation,YES,Observation.component.interpretation,YES,Observation.interpretation.code.coding
+transfers,intime,Encounter.location.period.start,YES,Encounter.location.period,YES,Encounter.location.period.start
+microbiologyevents,isolate_num,Observation.component.value,YES,Observation.identifier,NO,Observation.component.valueinteger
+datetimeevents,itemid,Observation.code,YES,Observation.code,YES,Observation.code.coding.code
+d_items,label,Observation.code,YES,observation.code,YES,observation.code.text
+admissions,language,Encounter.communication.language.coding.code,NO,No mapea,NO,Patient.communication.language
+icustays,last_careunit,Encounter.location.location,YES,Encounter.location.location,YES,Encounter.location.location
+inputevents,linkorderid,MedicationAdministration.request,NO,MedicationAdministration.partOf,YES,MedicationAdministration.partOf
+d_items,linksto,Observation.partOf,YES,Observation.derivedFrom,NO,observation.partOf
+procedureevents,location,Procedure.location,NO,Procedure.location,NO,Procedure.bodySite
+procedureevents,locationcategory,Procedure.location,NO,Procedure.location,NO,Procedure.bodySite.category
+pharmacy,lockout_interval,No mapea,NO,MedicationDispense.dosageInstruction,YES,MedicationDispense.dosageinstruction.timing
+icustays,los,Encounter.length,YES,Encounter.length,YES,Encounter.length
+d_items,lownormalvalue,Observation.referenceRange.low,YES,observation.referenceRange.low,YES,observation.referenceRange.low
+admissions,marital_status,Encounter.martialStatus.language.coding.code,NO,No mapea,NO,Patient.maritalStatus
+emar,medication,MedicationAdministration.medication,YES,MedicationAdministration.medication,YES,MedicationAdministration.medication
+prescriptions,ndc,MedicationRequest.medication,YES,MedicationRequest.identifier,YES,MedicationRequest.medication
+pharmacy,one_hr_max,No mapea,NO,MedicationDispense.dosageInstruction,YES,MedicationDispense.dosageinstruction.maxDosePerPeriod
+procedureevents,ordercategorydescription,Procedure.category,YES,Procedure.category,YES,Procedure.category
+procedureevents,ordercategoryname,Procedure.category,YES,Procedure.category,YES,Procedure.category
+inputevents,ordercomponenttypedescription,MedicationAdministration.dosage.text,NO,MedicationAdministration.note,NO,MedicationAdministration.category
+inputevents,orderid,MedicationAdministration.request,NO,MedicationAdministration.identifier,NO,MedicationAdministration.partOf
+microbiologyevents,org_itemid,Observation.value,NO,Observation.derivedFrom,NO,Observation.component.code
+microbiologyevents,org_name,Observation.value,NO,Observation.derivedFrom,NO,Observation.component.code
+transfers,outtime,Encounter.location.period.end,YES,Encounter.location.period,YES,Encounter.location.period.end
+d_items,outtime,Observation.value,YES,Observation.method,NO,observation.value
+inputevents,patientweight,MedicationAdministration.supportingInfo,YES,MedicationAdministration.supportingInformation,YES,MedicationAdministration.supportingInformation
+pharmacy,pharmacy_id,MedicationDispense.identifier,YES,MedicationDispense.identifier,YES,MedicationDispense.identifier
+pharmacy,poe_id,MedicationDispense.basedOn,YES,MedicationDispense.authorizingprescription,YES,MedicationDispense.authorizingprescription
+services,prev_service,Encounter.link,NO,Encounter.link.other,NO,Encounter.admission.admitsource
+pharmacy,proc_type,MedicationDispense.type,NO,MedicationDispense.type,YES,MedicationDispense.type
+prescriptions,prod_strength,MedicationRequest.medication,YES,MedicationRequest.medication,YES,MedicationRequest.medication
+inputevents,rate,MedicationAdministration.dosage.rate,YES,MedicationAdministration.dosage.rate,YES,MedicationAdministration.dosage.rateQuantity.value
+inputevents,rateuom,MedicationAdministration.dosage.rate,YES,MedicationAdministration.dosage.rate,YES,MedicationAdministration.dosage.rateQuantity.unit
+pharmacy,route,MedicationDispense.dosageInstruction,YES,MedicationDispense.dosageInstruction,YES,MedicationDispense.dosageinstruction.route
+emar,scheduletime,No direct mapping,NO,MedicationAdministration.occurence[x],YES,MedicationAdministration.occurencedatetime
+procedureevents,secondaryordercategoryname,Procedure.category,YES,Procedure.category,YES,Procedure.category
+diagnoses_icd,seq_num,No mapea,NO,condition.identifier,YES,condition.identifier
+hcpsevents,short_description,Encounter.reason.use,NO,Encounter.reason.use,NO,Encounter.type
+pharmacy,sliding_scale,No mapea,NO,MedicationDispense.dosageInstruction,YES,MedicationDispense.dosageinstruction.asNeeded
+microbiologyevents,spec_itemid,Observation.specimen,YES,Observation.specimen,YES,Observation.specimen.reference
+microbiologyevents,spec_type_desc,Observation.bodySite,NO,Observation.specimen,YES,Observation.specimen.display
+procedureevents,starttime,Procedure.occurence,YES,Procedure.occurence,YES,Procedure.occurenceperiod.start
+pharmacy,status,MedicationDispense.status,YES,MedicationDispense.status,YES,MedicationDispense.status
+inputevents,statusdescription,MedicationAdministration.status,YES,MedicationAdministration.status,YES,MedicationAdministration.status
+inputevents,stay_id,MedicationAdministration.identfier,NO,medicationadministration.encounter,YES,medicationadministration.partOf
+pharmacy,stoptime,MedicationDispense.whenHandedOver,NO,MedicationDispense.whenHandedOver,NO,MedicationDispense.dispenseRequest.validityPeriod.end
+datetimeevents,storetime,Observation.issued,YES,Observation.issued,YES,Observation.issued
+patients,subject_id,patient.identifier,YES,patient.identifier,YES,Patient.identifier
+inputevents,totalamount,MedicationAdministration.dosage.dose,YES,MedicationAdministration.dosage.dose,YES,MedicationAdministration.dosage.dose.value
+inputevents,totalamountuom,MedicationAdministration.dosage.dose,YES,MedicationAdministration.dosage.dose,YES,MedicationAdministration.dosage.dose.unit
+transfers,transfer_id,Encounter.identifier,NO,Encounter.location.location,YES,Encounter.location.location
+services,transfertime,No mapea,NO,Encounter.link.other,NO,Encounter.actualperiod.start
+d_items,unitname,Observation.unitname,NO,observation.value,YES,observation.valueQuantity.unit
+outputevents,value,Observation.value,YES,Observation.value,YES,Observation.valuequantity.value
+outputevents,valueuom,Observation.value,YES,Observation.value,YES,Observation.valuequantity.unit
+pharmacy,verifiedtime,No mapea,NO,MedicationDispense.statusChanged,NO,MedicationDispense.whenPrepared

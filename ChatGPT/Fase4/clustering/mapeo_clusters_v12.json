@@ -1,0 +1,303 @@
+Cluster: Cluster 1
+GPT Response:
+```json
+[
+    {
+        "table_attribute_name": "subject_id",
+        "fhir_attribute_name": "Patient.identifier", "Encounter.subject", "Procedure.subject"
+    },
+    {
+        "table_attribute_name": "hadm_id",
+        "fhir_attribute_name": "Encounter.identifier", "Procedure.encounter", "Condition.encounter"
+    },
+    {
+        "table_attribute_name": "admittime",
+        "fhir_attribute_name": "Encounter.actualPeriod", "Encounter.plannedStartDate", "Procedure.occurrence"
+    },
+    {
+        "table_attribute_name": "dischtime",
+        "fhir_attribute_name": "Encounter.actualPeriod", "Encounter.plannedEndDate", "Procedure.occurrence"
+    },
+    {
+        "table_attribute_name": "admission_type",
+        "fhir_attribute_name": "Encounter.class", "Encounter.type", "Encounter.priority"
+    },
+    {
+        "table_attribute_name": "admission_location",
+        "fhir_attribute_name": "Encounter.admission.origin", "Encounter.location.location", "Encounter.admission.admitSource"
+    },
+    {
+        "table_attribute_name": "discharge_location",
+        "fhir_attribute_name": "Encounter.admission.destination", "Encounter.admission.dischargeDisposition", "Encounter.location.location"
+    },
+    {
+        "table_attribute_name": "status",
+        "fhir_attribute_name": "Procedure.status", "MedicationRequest.status", "Encounter.status"
+    },
+    {
+        "table_attribute_name": "charttime",
+        "fhir_attribute_name": "Observation.effectiveDateTime", "Procedure.occurrence", "Encounter.actualPeriod"
+    },
+    {
+        "table_attribute_name": "stoptime",
+        "fhir_attribute_name": "MedicationRequest.dispenseRequest.validityPeriod", "Procedure.occurrence", "Encounter.plannedEndDate"
+    },
+    {
+        "table_attribute_name": "stay_id",
+        "fhir_attribute_name": "Encounter.identifier", "Procedure.partOf", "Condition.encounter"
+    },
+    {
+        "table_attribute_name": "chartdate",
+        "fhir_attribute_name": "Observation.effectiveDateTime", "Procedure.occurrence", "Encounter.actualPeriod"
+    },
+    {
+        "table_attribute_name": "first_careunit",
+        "fhir_attribute_name": "Encounter.location.location", "Encounter.class", "Encounter.type"
+    },
+    {
+        "table_attribute_name": "statusdescription",
+        "fhir_attribute_name": "Procedure.statusReason", "Procedure.status", "Encounter.status"
+    },
+    {
+        "table_attribute_name": "starttime",
+        "fhir_attribute_name": "Procedure.occurrence", "Encounter.actualPeriod", "Procedure.performer.period"
+    },
+    {
+        "table_attribute_name": "careunit",
+        "fhir_attribute_name": "Encounter.location.location", "Encounter.class", "Encounter.type"
+    },
+    {
+        "table_attribute_name": "intime",
+        "fhir_attribute_name": "Encounter.actualPeriod", "Encounter.plannedStartDate", "Procedure.occurrence"
+    },
+    {
+        "table_attribute_name": "curr_service",
+        "fhir_attribute_name": "Encounter.serviceType", "Encounter.careTeam", "Encounter.class"
+    },
+    {
+        "table_attribute_name": "outtime",
+        "fhir_attribute_name": "Encounter.actualPeriod", "Encounter.plannedEndDate", "Procedure.occurrence"
+    },
+    {
+        "table_attribute_name": "dod",
+        "fhir_attribute_name": "Patient.deceased", "Encounter.admission.dischargeDisposition", "Procedure.outcome"
+    },
+    {
+        "table_attribute_name": "anchor_age",
+        "fhir_attribute_name": "Patient.birthDate", "No additional attribute found", "No additional attribute found"
+    },
+    {
+        "table_attribute_name": "endtime",
+        "fhir_attribute_name": "Procedure.occurrence", "Encounter.actualPeriod", "Procedure.performer.period"
+    }
+]
+```
+
+Cluster: Cluster 2
+GPT Response:
+```json
+[
+    {
+        "table_attribute_name": "language",
+        "fhir_attribute_name": "Patient.communication.language", "Patient.communication.preferred", "No additional attribute found"
+    },
+    {
+        "table_attribute_name": "marital_status",
+        "fhir_attribute_name": "Patient.maritalStatus", "No additional attribute found", "No additional attribute found"
+    },
+    {
+        "table_attribute_name": "ethnicity",
+        "fhir_attribute_name": "No direct FHIR attribute found", "No additional attribute found", "No additional attribute found"
+    },
+    {
+        "table_attribute_name": "gender",
+        "fhir_attribute_name": "Patient.gender", "No additional attribute found", "No additional attribute found"
+    },
+    {
+        "table_attribute_name": "short_description",
+        "fhir_attribute_name": "Procedure.code", "DocumentReference.description", "Procedure.note"
+    },
+    {
+        "table_attribute_name": "icd_code",
+        "fhir_attribute_name": "Encounter.diagnosis.condition", "Encounter.reason.value", "Procedure.reason"
+    },
+    {
+        "table_attribute_name": "hcpcs_cd",
+        "fhir_attribute_name": "Procedure.code", "No additional attribute found", "No additional attribute found"
+    },
+    {
+        "table_attribute_name": "icd_version",
+        "fhir_attribute_name": "No direct FHIR attribute found", "No additional attribute found", "No additional attribute found"
+    }
+]
+```
+
+Cluster: Cluster 3
+GPT Response:
+```json
+[
+    {
+        "table_attribute_name": "lownormalvalue",
+        "fhir_attribute_name": "Observation.referenceRange.low", "Observation.referenceRange.normalValue", "Observation.referenceRange.text"
+    },
+    {
+        "table_attribute_name": "value",
+        "fhir_attribute_name": "Observation.value", "Observation.component.value", "Observation.dataAbsentReason"
+    },
+    {
+        "table_attribute_name": "valueuom",
+        "fhir_attribute_name": "Observation.value[x].unit", "Observation.component.value[x].unit", "Observation.referenceRange.low"
+    },
+    {
+        "table_attribute_name": "label",
+        "fhir_attribute_name": "Observation.code", "Observation.component.code", "Observation.category"
+    },
+    {
+        "table_attribute_name": "amountuom",
+        "fhir_attribute_name": "MedicationAdministration.dosage.dose", "MedicationRequest.dosageInstruction.dose", "NutritionIntake.consumedItem.amount"
+    },
+    {
+        "table_attribute_name": "highnormalvalue",
+        "fhir_attribute_name": "Observation.referenceRange.high", "Observation.referenceRange.normalValue", "Observation.referenceRange.text"
+    },
+    {
+        "table_attribute_name": "itemid",
+        "fhir_attribute_name": "Observation.identifier", "MedicationAdministration.identifier", "NutritionIntake.identifier"
+    },
+    {
+        "table_attribute_name": "location",
+        "fhir_attribute_name": "Observation.bodySite", "MedicationAdministration.dosage.site", "NutritionIntake.location"
+    }
+]
+```
+
+Cluster: Cluster 4
+GPT Response:
+```json
+[
+    {
+        "table_attribute_name": "ordercategorydescription",
+        "fhir_attribute_name": "MedicationRequest.category", "MedicationAdministration.category", "MedicationDispense.category"
+    },
+    {
+        "table_attribute_name": "emar_id",
+        "fhir_attribute_name": "MedicationAdministration.identifier", "MedicationDispense.identifier", "MedicationRequest.identifier"
+    },
+    {
+        "table_attribute_name": "dose_val_rx",
+        "fhir_attribute_name": "MedicationAdministration.dosage.dose", "MedicationRequest.dosageInstruction", "MedicationDispense.dosageInstruction"
+    },
+    {
+        "table_attribute_name": "dose_unit_rx",
+        "fhir_attribute_name": "MedicationAdministration.dosage.dose", "MedicationRequest.dosageInstruction", "MedicationDispense.dosageInstruction"
+    },
+    {
+        "table_attribute_name": "storetime",
+        "fhir_attribute_name": "MedicationAdministration.recorded", "MedicationDispense.recorded", "MedicationRequest.authoredOn"
+    },
+    {
+        "table_attribute_name": "amount",
+        "fhir_attribute_name": "MedicationDispense.quantity", "MedicationAdministration.dosage.dose", "MedicationRequest.quantity"
+    },
+    {
+        "table_attribute_name": "one_hr_max",
+        "fhir_attribute_name": "MedicationRequest.dosageInstruction", "MedicationAdministration.dosage.rate", "No additional attribute found"
+    },
+    {
+        "table_attribute_name": "frequency",
+        "fhir_attribute_name": "MedicationRequest.dosageInstruction", "MedicationAdministration.dosage.rate", "MedicationDispense.dosageInstruction"
+    },
+    {
+        "table_attribute_name": "fill_quantity",
+        "fhir_attribute_name": "MedicationDispense.quantity", "MedicationRequest.dispenseRequest.quantity", "No additional attribute found"
+    },
+    {
+        "table_attribute_name": "medication",
+        "fhir_attribute_name": "MedicationRequest.medication", "MedicationAdministration.medication", "MedicationDispense.medication"
+    },
+    {
+        "table_attribute_name": "pharmacy_id",
+        "fhir_attribute_name": "MedicationDispense.identifier", "MedicationRequest.identifier", "MedicationAdministration.identifier"
+    },
+    {
+        "table_attribute_name": "prod_strength",
+        "fhir_attribute_name": "Medication.ingredient.strength", "MedicationRequest.dosageInstruction", "MedicationAdministration.dosage.dose"
+    },
+    {
+        "table_attribute_name": "event_txt",
+        "fhir_attribute_name": "MedicationAdministration.status", "MedicationDispense.status", "MedicationRequest.status"
+    },
+    {
+        "table_attribute_name": "rate",
+        "fhir_attribute_name": "MedicationAdministration.dosage.rate", "MedicationRequest.dosageInstruction", "MedicationDispense.dosageInstruction"
+    },
+    {
+        "table_attribute_name": "rateuom",
+        "fhir_attribute_name": "MedicationAdministration.dosage.rate", "MedicationRequest.dosageInstruction", "MedicationDispense.dosageInstruction"
+    },
+    {
+        "table_attribute_name": "entertime",
+        "fhir_attribute_name": "MedicationRequest.authoredOn", "MedicationAdministration.recorded", "MedicationDispense.recorded"
+    },
+    {
+        "table_attribute_name": "duration",
+        "fhir_attribute_name": "MedicationRequest.dispenseRequest.initialFill.duration", "MedicationAdministration.dosage.rate", "MedicationDispense.daysSupply"
+    },
+    {
+        "table_attribute_name": "route",
+        "fhir_attribute_name": "MedicationAdministration.dosage.route", "MedicationRequest.dosageInstruction", "MedicationDispense.dosageInstruction"
+    },
+    {
+        "table_attribute_name": "ordercategoryname",
+        "fhir_attribute_name": "MedicationRequest.category", "MedicationAdministration.category", "MedicationDispense.category"
+    }
+]
+```
+
+Cluster: Cluster 5
+GPT Response:
+```json
+[
+    {
+        "table_attribute_name": "org_name",
+        "fhir_attribute_name": "Observation.performer", "Observation.subject", "Observation.encounter"
+    },
+    {
+        "table_attribute_name": "test_name",
+        "fhir_attribute_name": "Observation.code", "Observation.category", "Observation.method"
+    },
+    {
+        "table_attribute_name": "ab_itemid",
+        "fhir_attribute_name": "Observation.identifier", "Observation.component.code", "Observation.component.value"
+    },
+    {
+        "table_attribute_name": "ab_name",
+        "fhir_attribute_name": "Observation.component.code", "Observation.value", "Observation.note"
+    },
+    {
+        "table_attribute_name": "category",
+        "fhir_attribute_name": "Observation.category", "Observation.code", "Observation.note"
+    },
+    {
+        "table_attribute_name": "spec_type_desc",
+        "fhir_attribute_name": "Observation.specimen", "Observation.bodySite", "Observation.method"
+    },
+    {
+        "table_attribute_name": "org_itemid",
+        "fhir_attribute_name": "Observation.identifier", "Observation.value", "Observation.component.code"
+    },
+    {
+        "table_attribute_name": "dilution_value",
+        "fhir_attribute_name": "Observation.value", "Observation.component.value", "Observation.interpretation"
+    },
+    {
+        "table_attribute_name": "interpretation",
+        "fhir_attribute_name": "Observation.interpretation", "Observation.note", "Observation.value"
+    },
+    {
+        "table_attribute_name": "spec_itemid",
+        "fhir_attribute_name": "Observation.specimen", "Observation.identifier", "Observation.component.code"
+    }
+]
+```
+

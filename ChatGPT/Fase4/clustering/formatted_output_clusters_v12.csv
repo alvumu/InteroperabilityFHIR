@@ -1,0 +1,68 @@
+attribute,GPT
+subject_id,Patient.identifier;Encounter.subject;Procedure.subject
+hadm_id,Encounter.identifier;Procedure.encounter;Condition.encounter
+admittime,Encounter.actualPeriod;Encounter.plannedStartDate;Procedure.occurrence
+dischtime,Encounter.actualPeriod;Encounter.plannedEndDate;Procedure.occurrence
+admission_type,Encounter.class;Encounter.type;Encounter.priority
+admission_location,Encounter.admission.origin;Encounter.location.location;Encounter.admission.admitSource
+discharge_location,Encounter.admission.destination;Encounter.admission.dischargeDisposition;Encounter.location.location
+status,Procedure.status;MedicationRequest.status;Encounter.status
+charttime,Observation.effectiveDateTime;Procedure.occurrence;Encounter.actualPeriod
+stoptime,MedicationRequest.dispenseRequest.validityPeriod;Procedure.occurrence;Encounter.plannedEndDate
+stay_id,Encounter.identifier;Procedure.partOf;Condition.encounter
+chartdate,Observation.effectiveDateTime;Procedure.occurrence;Encounter.actualPeriod
+first_careunit,Encounter.location.location;Encounter.class;Encounter.type
+statusdescription,Procedure.statusReason;Procedure.status;Encounter.status
+starttime,Procedure.occurrence;Encounter.actualPeriod;Procedure.performer.period
+careunit,Encounter.location.location;Encounter.class;Encounter.type
+intime,Encounter.actualPeriod;Encounter.plannedStartDate;Procedure.occurrence
+curr_service,Encounter.serviceType;Encounter.careTeam;Encounter.class
+outtime,Encounter.actualPeriod;Encounter.plannedEndDate;Procedure.occurrence
+dod,Patient.deceased;Encounter.admission.dischargeDisposition;Procedure.outcome
+anchor_age,Patient.birthDate;No additional attribute found;No additional attribute found
+endtime,Procedure.occurrence;Encounter.actualPeriod;Procedure.performer.period
+language,Patient.communication.language;Patient.communication.preferred;No additional attribute found
+marital_status,Patient.maritalStatus;No additional attribute found;No additional attribute found
+ethnicity,No direct FHIR attribute found;No additional attribute found;No additional attribute found
+gender,Patient.gender;No additional attribute found;No additional attribute found
+short_description,Procedure.code;DocumentReference.description;Procedure.note
+icd_code,Encounter.diagnosis.condition;Encounter.reason.value;Procedure.reason
+hcpcs_cd,Procedure.code;No additional attribute found;No additional attribute found
+icd_version,No direct FHIR attribute found;No additional attribute found;No additional attribute found
+lownormalvalue,Observation.referenceRange.low;Observation.referenceRange.normalValue;Observation.referenceRange.text
+value,Observation.value;Observation.component.value;Observation.dataAbsentReason
+valueuom,Observation.value[x].unit;Observation.component.value[x].unit;Observation.referenceRange.low
+label,Observation.code;Observation.component.code;Observation.category
+amountuom,MedicationAdministration.dosage.dose;MedicationRequest.dosageInstruction.dose;NutritionIntake.consumedItem.amount
+highnormalvalue,Observation.referenceRange.high;Observation.referenceRange.normalValue;Observation.referenceRange.text
+itemid,Observation.identifier;MedicationAdministration.identifier;NutritionIntake.identifier
+location,Observation.bodySite;MedicationAdministration.dosage.site;NutritionIntake.location
+ordercategorydescription,MedicationRequest.category;MedicationAdministration.category;MedicationDispense.category
+emar_id,MedicationAdministration.identifier;MedicationDispense.identifier;MedicationRequest.identifier
+dose_val_rx,MedicationAdministration.dosage.dose;MedicationRequest.dosageInstruction;MedicationDispense.dosageInstruction
+dose_unit_rx,MedicationAdministration.dosage.dose;MedicationRequest.dosageInstruction;MedicationDispense.dosageInstruction
+storetime,MedicationAdministration.recorded;MedicationDispense.recorded;MedicationRequest.authoredOn
+amount,MedicationDispense.quantity;MedicationAdministration.dosage.dose;MedicationRequest.quantity
+one_hr_max,MedicationRequest.dosageInstruction;MedicationAdministration.dosage.rate;No additional attribute found
+frequency,MedicationRequest.dosageInstruction;MedicationAdministration.dosage.rate;MedicationDispense.dosageInstruction
+fill_quantity,MedicationDispense.quantity;MedicationRequest.dispenseRequest.quantity;No additional attribute found
+medication,MedicationRequest.medication;MedicationAdministration.medication;MedicationDispense.medication
+pharmacy_id,MedicationDispense.identifier;MedicationRequest.identifier;MedicationAdministration.identifier
+prod_strength,Medication.ingredient.strength;MedicationRequest.dosageInstruction;MedicationAdministration.dosage.dose
+event_txt,MedicationAdministration.status;MedicationDispense.status;MedicationRequest.status
+rate,MedicationAdministration.dosage.rate;MedicationRequest.dosageInstruction;MedicationDispense.dosageInstruction
+rateuom,MedicationAdministration.dosage.rate;MedicationRequest.dosageInstruction;MedicationDispense.dosageInstruction
+entertime,MedicationRequest.authoredOn;MedicationAdministration.recorded;MedicationDispense.recorded
+duration,MedicationRequest.dispenseRequest.initialFill.duration;MedicationAdministration.dosage.rate;MedicationDispense.daysSupply
+route,MedicationAdministration.dosage.route;MedicationRequest.dosageInstruction;MedicationDispense.dosageInstruction
+ordercategoryname,MedicationRequest.category;MedicationAdministration.category;MedicationDispense.category
+org_name,Observation.performer;Observation.subject;Observation.encounter
+test_name,Observation.code;Observation.category;Observation.method
+ab_itemid,Observation.identifier;Observation.component.code;Observation.component.value
+ab_name,Observation.component.code;Observation.value;Observation.note
+category,Observation.category;Observation.code;Observation.note
+spec_type_desc,Observation.specimen;Observation.bodySite;Observation.method
+org_itemid,Observation.identifier;Observation.value;Observation.component.code
+dilution_value,Observation.value;Observation.component.value;Observation.interpretation
+interpretation,Observation.interpretation;Observation.note;Observation.value
+spec_itemid,Observation.specimen;Observation.identifier;Observation.component.code

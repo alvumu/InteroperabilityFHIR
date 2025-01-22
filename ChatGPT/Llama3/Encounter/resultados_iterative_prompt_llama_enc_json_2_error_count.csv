@@ -1,0 +1,7 @@
+Error,count
+Sin errores,114
+The length of list 'type' in FHIR example differs,2
+The length of list 'location' in FHIR example differs,2
+'location[0].location.reference': FHIR Generated value is wrong,1
+Key 'hospitalization.dischargeDisposition' is present in FHIR generated but not in FHIR example,1
+Warning,119

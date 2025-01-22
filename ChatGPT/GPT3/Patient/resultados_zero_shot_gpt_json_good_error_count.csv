@@ -1,0 +1,9 @@
+Error,count
+Key '.communication' is present in FHIR generated but not in FHIR example,207
+'identifier[0].system': FHIR Generated value is wrong,207
+Key 'maritalStatus.coding[0].display' is present in FHIR example but not in FHIR generated,207
+The length of list 'extension' in FHIR example differs,207
+'maritalStatus.coding[0].system': FHIR Generated value is wrong,137
+'meta.profile[0]': FHIR Generated value is wrong,7
+'birthDate': FHIR Generated value is wrong,6
+error,207

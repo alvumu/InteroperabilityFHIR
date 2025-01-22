@@ -1,0 +1,24 @@
+Error,count
+'birthDate': FHIR Generated value is wrong,230
+'identifier[0].system': FHIR Generated value is wrong,230
+Key '.communication' is present in FHIR generated but not in FHIR example,229
+Key 'name[0].text' is present in FHIR example but not in FHIR generated,153
+Key '.maritalStatus' is present in FHIR generated but not in FHIR example,137
+'extension[0].url': FHIR Generated value is wrong,124
+Key 'extension[1].valueCoding' is present in FHIR example but not in FHIR generated,124
+'extension[1].url': FHIR Generated value is wrong,124
+Key 'extension[0].valueCoding' is present in FHIR example but not in FHIR generated,124
+Key 'extension[0].extension' is present in FHIR generated but not in FHIR example,124
+Key 'extension[1].extension' is present in FHIR generated but not in FHIR example,119
+Key 'extension[2].valueCode' is present in FHIR generated but not in FHIR example,119
+Key 'extension[2].valueCoding' is present in FHIR example but not in FHIR generated,119
+'extension[2].url': FHIR Generated value is wrong,119
+'gender': FHIR Generated value is wrong,113
+The length of list 'extension' in FHIR example differs,106
+Key 'maritalStatus.coding[0].display' is present in FHIR example but not in FHIR generated,93
+'maritalStatus.coding[0].system': FHIR Generated value is wrong,93
+Key '.deceasedDateTime' is present in FHIR generated but not in FHIR example,40
+'maritalStatus.coding[0].code': FHIR Generated value is wrong,30
+Key 'extension[1].valueCode' is present in FHIR generated but not in FHIR example,5
+Key '.admissions' is present in FHIR example but not in FHIR generated,4
+error,230

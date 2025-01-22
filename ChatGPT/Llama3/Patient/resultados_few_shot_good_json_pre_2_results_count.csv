@@ -1,0 +1,6 @@
+Error,count
+Sin errores,199
+'extension[1].extension[0].valueCoding.code': FHIR Generated value is wrong,6
+'extension[0].extension[0].valueCoding.code': FHIR Generated value is wrong,2
+warning,199
+error,8
