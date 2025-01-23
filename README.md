@@ -54,4 +54,6 @@ Para poder acceder a los datos es necesario seguir los pasos detallados en : htt
 
 Debido a la responsabilidad y privacidad de los datos originales no es posible añadirlos a este repositorio para convertirlo en replicable. Las políticas de responsabilidad de MIMIC no permiten la publicación de los conjuntos de datos de manera open-source. 
 
+## Autor
+_Alvaro Riquelme Tornel_
  
