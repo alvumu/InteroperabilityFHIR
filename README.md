@@ -36,4 +36,22 @@ Finalmente tras el estudio y análisis, se seleccionan los embeddings que mejor 
 ![image](https://github.com/user-attachments/assets/c5473b16-1930-4ab7-bd27-88d6a63d8361)
 
 
+## Fuente de Datos
+ **MIMIC**(_Medical Information Mart for Intensive Care_) es una gran base de datos de libre acceso que contiene datos sanitarios no identificados de pacientes ingresados en las unidades de cuidados intensivos del _Beth Israel Deaconess Medical Center_. En este proyecto se ha utilizado concretamente la versión _MIMIC-IV_, este conjunto de datos contiene información en el tramo temporal de 2008 a 2019. Los datos se recopilaron a partir de monitores de cabecera _Metavision_.
+Esta versión es una base de datos relacional que contiene estancias hospitalarias reales de pacientes ingresados en un centro médico académico terciario de \textit{Boston}, _MA (EE.UU._). _MIMIC-IV_ contiene información exhaustiva de cada paciente durante su estancia en el hospital: mediciones de laboratorio, medicamentos administrados, constantes vitales documentadas, etc. La base de datos está pensada para apoyar una amplia variedad de investigaciones en el ámbito de la asistencia sanitaria. _MIMIC-IV_ se basa en el éxito de _MIMIC-III_ e incorpora numerosas mejoras con respecto a otras versiones del conjunto de datos. 
+**MIMIC-IV** se divide en "módulos" para reflejar la procedencia de los datos. 
+Actualmente existen cinco módulos:
+   - hosp: datos de nivel hospitalario para pacientes: laboratorios, micro y administración electrónica de medicación
+   - icu: datos a nivel de UCI. Se trata de las tablas de eventos, y su estructura es idéntica a la de MIMIC-III (chartevents, etc.)
+   - ed: datos del servicio de urgencias
+   - cxr: tablas de búsqueda y metadatos de MIMIC-CXR, que permiten la vinculación con MIMIC-IV
+   - note: notas clínicas de texto libre no identificadas
 
+Para poder acceder a los datos es necesario seguir los pasos detallados en : https://mimic.mit.edu/docs/gettingstarted/
+  
+
+## Replicabilidad
+
+Debido a la responsabilidad y privacidad de los datos originales no es posible añadirlos a este repositorio para convertirlo en replicable. Las políticas de responsabilidad de MIMIC no permiten la publicación de los conjuntos de datos de manera open-source. 
+
+ 
