@@ -611,6 +611,7 @@ The dosage form in which the medication is prescribed (e.g., ‘TABLET’, ‘VI
 
 """
     outputevents_description = """  
+    The outputevents table is used to record and store clinical observations made during patient hospitalizations. This table enables healthcare professionals and researchers to analyze patients' clinical data, monitor progress over time, and support medical research.
 subject_id: Each row in the table corresponds to a unique individual patient identified by subject_id. This identifier ensures that all records associated with a specific subject_id pertain to the same individual.
 
 hadm_id: An identifier that uniquely specifies a hospitalization. Rows sharing the same hadm_id relate to the same hospital admission, providing contextual information about where and when the observations were made.
