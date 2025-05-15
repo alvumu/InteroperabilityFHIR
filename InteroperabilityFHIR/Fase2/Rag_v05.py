@@ -330,12 +330,10 @@ def generate_response(query, modelName, context, iterations=5):
                 {
                     "role": "system",
                     "content": (
-                        "You are a mapping assistant. Your task is to determine to which attribute(s) of the FHIR resource each column of the provided table corresponds. "
-                        "A column can correspond to multiple attributes in FHIR resources. Do not include the data values, only provide the mapping between column names and FHIR attribute names."
-                        "Provide your final answer as a JSON object that conforms to the following structure '{table column name : fhirAttribute } "
-                        "Make sure the response is well-formed and strictly follows the JSON structure provided."
-                        "Do not map the values of the columns, only the column names."
-                        "Do not create new attributes or modify the existing ones. Do not repeat the table attributes in the mapping."
+                        "You are a mapping tool assistant. You have information about FHIR resources and the tabular data to map. Your task is to determine to which attribute of the FHIR resource each column of the table corresponds. A column can correspond to multiple attributes in FHIR resources. Take into account the column values as well."
+                        "Before providing your final answer, carefully analyze and verify each mapping to ensure its correctness. Do not mention this analysis to the user."
+                        "Provide the user with a table that shows the mapping between the columns of the tabular data and the FHIR resources."
+                        "The output format must be a JSON object with the following structure: {'column_name': 'FHIRResource.attribute'}"
                         f"Profile information: {context} and {query}"
                     )
                 },
