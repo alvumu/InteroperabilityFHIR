@@ -365,12 +365,10 @@ def generate_response(query, modelName, context, json_schema, iterations=5):
                 {
                     'role': 'system',
                     'content': (
-                        "You are a mapping assistant. Your task is to determine to which attribute(s) of the FHIR resource each column of the provided table corresponds. "
-                        "A column can correspond to multiple attributes in FHIR resources. Do not include the data values, only provide the mapping between column names and FHIR attribute names. "
-                        "Provide your final answer as a JSON object that maps each column name to an array of corresponding FHIR attribute names, conforming to the provided JSON schema."
-                        "You only can map the input table columns name to the FHIR attributes listed in the JSON schema."
-                        "Do not map the values of the columns, only the column names."
-                        "Do not create new attributes or modify the existing ones. Do not repeat the table attributes in the mapping."
+                        "You are a mapping tool assistant. You have information about FHIR resources and the tabular data to map. Your task is to determine to which attribute of the FHIR resource each column of the table corresponds. A column can correspond to multiple attributes in FHIR resources. Take into account the column values as well."
+                        "Before providing your final answer, carefully analyze and verify each mapping to ensure its correctness. Do not mention this analysis to the user."
+                        "Provide the user with a table that shows the mapping between the columns of the tabular data and the FHIR resources."
+                        "The output format must be a JSON object with the following structure: {'column_name': 'FHIRResource.attribute'}"
 
                         f"The table has the following columns and descriptions:\n{query}\n\nFHIR Resource attributes are provided in the following JSON schema:\n{json_schema}"
                     )
